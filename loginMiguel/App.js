@@ -1,10 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { Image, StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useState } from 'react';
 
 export default function App() {
+  const [email, setEmail] = useState("")
+  const [senha, setSenha] = useState("")
 
-
+  const logIn = () =>{
+    alert("formulário enviado!!")
+    setEmail("")
+    setSenha("")
+  }
   return (
     <View style={styles.container}>
 
@@ -28,12 +35,12 @@ export default function App() {
 
         <View style={styles.inputBox}>
           <Text style={styles.textInput}> Email: </Text>
-          <TextInput style={styles.input} placeholder='Digite seu email'/>
+          <TextInput style={styles.input} placeholder='Digite seu email' value={email} onChangeText={() => {setEmail()}} />
           <Text style={styles.textInput}> Senha: </Text>
-          <TextInput style={styles.input} placeholder='Digite sua senha'/>
+          <TextInput style={styles.input} placeholder='Digite sua senha' value={senha} onChangeText={() => {setSenha()}} />
         </View>
 
-        <TouchableOpacity style={styles.button} onPress={() => alert("formulário enviado!!")}>
+        <TouchableOpacity style={styles.button} onPress={() => {logIn()}}>
           <Text style={styles.textButton}> enviar </Text>
         </TouchableOpacity>
 
@@ -104,7 +111,7 @@ const styles = StyleSheet.create({
 
   button: {
     height: 45,
-    width: 200, 
+    width: 200,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#5CCDDD',
