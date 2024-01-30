@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Container, Div, DivBtns } from './src/components/Container/Container';
+import { Title, TitleBtn } from './src/components/Title/Title';
+import { BtnDecrement, BtnIncrement } from './src/components/Btn\'s/Btns';
 
 export default function App() {
 
@@ -10,7 +12,12 @@ export default function App() {
     setCount(count + 1)
   }
   const decrement = () => {
-    setCount(count - 1)
+    if (count > 0) {
+      setCount(count - 1)
+    }else{
+      alert("Não é possível o contador ser menor que 0")
+    }
+    
   }
 
   useEffect(() => {
@@ -18,61 +25,29 @@ export default function App() {
   }, [count])
 
   return (
-    <View style={styles.container}>
-      <View style={styles.container2}>
-        <Text style={styles.text}>Contador: {count}</Text>
-        <TouchableOpacity onPress={increment} style={styles.buttonUp}>
-          <Text style={styles.textButton}>Incrementar</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={decrement} style={styles.buttonDown}>
-          <Text style={styles.textButton}>Decrementar</Text>
-        </TouchableOpacity>
-        <StatusBar style="auto" />
-      </View>
-    </View>
+    <Container source={require('./assets/f.webp')}>
+        <Div>
+          <Title>Contador:</Title>
+          <Title>{count}</Title>
+          <DivBtns >
+
+            <BtnIncrement onPress={increment}>
+
+              <TitleBtn>Incrementar</TitleBtn>
+
+            </BtnIncrement>
+
+            <BtnDecrement onPress={decrement}>
+
+              <TitleBtn>Decrementar</TitleBtn>
+
+            </BtnDecrement>
+
+          </DivBtns>
+
+          <StatusBar style="auto" />
+
+        </Div>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  container2: {
-    height:'50%',
-    width: '80%',
-    backgroundColor: '#c1c1c1',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize:20,
-    textTransform: 'capitalize'
-  },
-  textButton: {
-    fontSize:14,
-    textTransform: 'uppercase'
-  },
-  buttonUp: {
-    marginTop: 15,
-    height: 80,
-    width: 200,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#17fcf5',
-    padding: 10,
-    borderWidth: 1,
-  },
-  buttonDown: {
-    marginTop: 15,
-    height: 80,
-    width: 200,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f76d16',
-    padding: 10,
-    borderWidth: 1,
-  },
-});
