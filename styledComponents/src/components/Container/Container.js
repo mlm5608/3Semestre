@@ -9,13 +9,11 @@ export const Container = styled(ImageBackground)`
 export const Div = styled.View`
     height: 50%;
     width: 80%;
-    background-color: transparent;
     align-items: center;
     justify-content: center;
 `
 
 export const DivBtns = styled(Div)`
-    background-color: transparent;
     height: 50%;
     width: 100%;
     align-items: center;
