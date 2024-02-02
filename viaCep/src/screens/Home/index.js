@@ -1,57 +1,68 @@
-import { ContainerForm, ScrollForm } from "./style"
+import { ContainerForm, InputsBox, ScrollForm } from "./style"
 import { BoxInput } from "../../Components/BoxInput/index"
-import { View } from "react-native"
+import { useState } from "react"
+import axios from "axios"
 
 
 export const Home = () => {
+    const [cep, setCep] = useState('09041310')
+    const [log, setLog] = useState("")
+    const [bairro, setBairro] = useState("")
+    const [cidade, setCidade] = useState("")
+    const [estado, setEstado] = useState("")
+    const [uf, setUf] = useState("")
+
     return (
         <ScrollForm>
             <ContainerForm>
                 <BoxInput
                     textLabel='informar CEP'
-                    fieldWidth={100}
                     placeholder='Cep...'
                     keyType='numeric'
                     maxLength={9}
+                    fieldValue={cep}
+                    editable
+                    onChangeText={ (tx) => setCep(tx)}
                 />
                 <BoxInput
                     textLabel='Logradouro'
-                    fieldWidth={100}
                     placeholder='Logradouro...'
-                    keyType='text'
-                    maxLength={9}
+                    keyType='default'
+                    fieldValue={log}
+                    
                 />
                 <BoxInput
                     textLabel='Bairro'
-                    fieldWidth={100}
                     placeholder='Bairro...'
-                    keyType='text'
-                    maxLength={9}
+                    keyType='default'
+                    fieldValue={bairro}
+                    
                 />
                 <BoxInput
                     textLabel='Cidade'
-                    fieldWidth={100}
                     placeholder='Cidade...'
-                    keyType='text'
-                    maxLength={9}
+                    keyType='default'
+                    fieldValue={cidade}
+                    
                 />
 
-                <View>
+                <InputsBox>
                     <BoxInput
                         textLabel='Estado'
-                        fieldWidth={100}
+                        fieldWidth={68}
                         placeholder='Estado...'
-                        keyType='text'
-                        maxLength={9}
+                        keyType='default'
+                        fieldValue={estado}
+                        
                     />
                     <BoxInput
                         textLabel='UF'
-                        fieldWidth={100}
-                        placeholder='UF...'
-                        keyType='text'
-                        maxLength={9}
+                        fieldWidth={23}
+                        placeholder='UF'
+                        keyType='default'
+                        fieldValue={uf}
                     />
-                </View>
+                </InputsBox>
             </ContainerForm>
         </ScrollForm>
     )
