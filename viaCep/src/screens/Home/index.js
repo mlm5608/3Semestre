@@ -15,27 +15,12 @@ export const Home = () => {
         stateShortname: ""
     })
 
-    const [log, setLog] = useState("")
-    const [bairro, setBairro] = useState("")
-    const [cidade, setCidade] = useState("")
-    const [estado, setEstado] = useState("")
-    const [uf, setUf] = useState("")
-
     const getItems = async () => {
         try {
             alert(" deu bom ")
             const promise = await api.get(`/${cep}`)
 
             setDados(promise.data.result)
-
-
-
-            // setLog(promise.data.result.street)
-            // setBairro(promise.data.result.district)
-            // setCidade(promise.data.result.city)
-            // setEstado(promise.data.result.state)
-            // setUf(promise.data.result.stateShortname)
-
         } catch (error) {
             console.warn("Não foi possível encontrar esse cep.")
             console.warn(cep)
