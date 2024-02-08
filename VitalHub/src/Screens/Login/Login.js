@@ -1,14 +1,15 @@
-import {Container } from "../../Components/Container/style"
-import { Logo } from "../../Components/Logo/style"
+import {Container} from "../../Components/Container/style"
+import {Logo} from "../../Components/Logo/style"
 import { Title } from "../../Components/Title/style"
-import { Button, ButtonGoogle } from "../../Components/Button/style"
-import { LinkMedium } from "../../Components/LinkAccount/style"
-import { ButtonTitle, ButtonTitleGoogle } from "../../Components/ButtonTitle/style"
+import {Input} from "../../Components/Input/style"
+import {LinkMedium} from "../../Components/LinkMedium/style"
+import {Button, ButtonGoogle} from "../../Components/Button/style"
+import {ButtonTitle, ButtonTitleGoogle} from "../../Components/ButtonTitle/style"
+import {ContentAccount} from "../../Components/ContentAccount/style"
+import {TextAccount} from "../../Components/TextAccount/style"
+import {LinkAccount} from "../../Components/LinkAccount/style"
 import { AntDesign } from '@expo/vector-icons';
-import { ContentAccount } from "../../Components/ContentAccount/style"
-import { TextAccount } from "../../Components/TextAccount/style"
-import { LinkAccount } from "../../Components/LinkAccount/style"
-import { Input } from "../../Components/Input/style"
+
 
 
 export const Login = ({ navigation }) => {

@@ -8,6 +8,7 @@ import { RecSenha } from "./src/Screens/RecSenha/RecSenha";
 import { RedSenha } from "./src/Screens/RedSenha/RedSenha";
 import { Cadastro } from "./src/Screens/Cadastro/Cadastro";
 import { Verificacao } from "./src/Screens/Verificacao/Verificacao";
+import { PerfilPaciente } from "./src/Screens/PerfilPaciente/PerfilPaciente";
 
 
 const Stack = createNativeStackNavigator();
@@ -64,6 +65,11 @@ export default function App() {
         <Stack.Screen
         name="Verificacao"
         component={Verificacao}
+        options={{title:"Verificação de email"}}
+        />
+        <Stack.Screen
+        name="PerfilPaciente"
+        component={PerfilPaciente}
         options={{title:"Verificação de email"}}
         />
       </Stack.Navigator>

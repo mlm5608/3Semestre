@@ -1,18 +1,24 @@
 import { Button } from "../../Components/Button/style";
 import { ButtonTitle } from "../../Components/ButtonTitle/style";
 import { Container } from "../../Components/Container/style";
-import { Input, InputVerify } from "../../Components/Input/style";
-import { InputsBox } from "../../Components/InputsBox/style";
-import { LinkAccount } from "../../Components/LinkAccount/style";
-import { LinkB } from "../../Components/LinkB/style";
-import { Logo } from "../../Components/Logo/style";
+import { InputVerify } from "../../Components/Input/style";
+import { InputsBox } from "../../Components/InputsBox/style"
+import { LogoIcon } from "../../Components/Logo/style";
 import { SubEmail, Subtitle } from "../../Components/Subtitle/style";
 import { Title } from "../../Components/Title/style";
+import { LinkB } from "../../Components/LinkB/style"
+import { AntDesign } from '@expo/vector-icons';
+import { IconBox } from "../../Components/IconBox/style";
 
 export const Verificacao = ({ navigation }) => {
   return (
     <Container>
-      <Logo source={require("../../Assets/VitalHub_Logo.png")} />
+
+      <IconBox>
+        <AntDesign name="close" size={22} color="#34898F" />
+      </IconBox>
+
+      <LogoIcon source={require("../../Assets/VitalHub_Logo.png")} />
 
       <Title> Verifique seu e-mail </Title>
 
