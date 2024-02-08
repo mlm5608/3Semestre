@@ -13,3 +13,13 @@ export const Input = styled.TextInput `
     padding: 16px;
     color: #34898F;
 `
+
+export const InputVerify= styled(Input)`
+    width: 65px;
+    height: 65px;
+    font-size: 40px;
+    font-family: "Quicksand_600SemiBold";
+    border-color: #77CACF;
+    padding: 0px;
+    text-align: center;
+`

@@ -3,8 +3,11 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Navegacao } from "./src/Screens/Navegacao/Navegacao";
 import { Login } from "./src/Screens/Login/Login";
 import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium } from "@expo-google-fonts/montserrat-alternates";
-import {Quicksand_500Medium} from "@expo-google-fonts/quicksand";
+import {Quicksand_500Medium, Quicksand_600SemiBold} from "@expo-google-fonts/quicksand";
 import { RecSenha } from "./src/Screens/RecSenha/RecSenha";
+import { RedSenha } from "./src/Screens/RedSenha/RedSenha";
+import { Cadastro } from "./src/Screens/Cadastro/Cadastro";
+import { Verificacao } from "./src/Screens/Verificacao/Verificacao";
 
 
 const Stack = createNativeStackNavigator();
@@ -14,7 +17,8 @@ export default function App() {
   const [fontsLoaded, fontError] = useFonts({
     MontserratAlternates_600SemiBold,
     MontserratAlternates_500Medium,
-    Quicksand_500Medium
+    Quicksand_500Medium,
+    Quicksand_600SemiBold
   })
 
   if (!fontsLoaded && !fontError) {
@@ -46,6 +50,21 @@ export default function App() {
         name="RecSenha" 
         component={RecSenha}
         options={{title:"Recuperação de senha"}}
+        />
+        <Stack.Screen
+        name="RedSenha" 
+        component={RedSenha}
+        options={{title:"Redefinição de senha"}}
+        />
+        <Stack.Screen
+        name="Cadastro"
+        component={Cadastro}
+        options={{title:"Cadastro de usuario"}}
+        />
+        <Stack.Screen
+        name="Verificacao"
+        component={Verificacao}
+        options={{title:"Verificação de email"}}
         />
       </Stack.Navigator>
     </NavigationContainer>

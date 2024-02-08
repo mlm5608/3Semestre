@@ -1,10 +1,11 @@
-import { Button } from "../../Components/Button/Style"
-import { ButtonTitle } from "../../Components/ButtonTitle/Style"
-import { Container } from "../../Components/Container/Style"
-import { Input } from "../../Components/Input/Style"
-import { Logo } from "../../Components/Logo/Style"
-import { Subtitle } from "../../Components/Subtitle/Style"
-import { Title } from "../../Components/Title/Style"
+import { Button } from '../../Components/Button/style'
+import { ButtonTitle } from '../../Components/ButtonTitle/style'
+import { Container } from '../../Components/Container/style'
+import { Input } from '../../Components/Input/style'
+import { Logo } from '../../Components/Logo/style'
+import { Subtitle } from '../../Components/Subtitle/style'
+import { Title } from '../../Components/Title/style'
+
 
 export const RecSenha = ({ navigation }) => {
     return(

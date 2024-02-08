@@ -1,14 +1,14 @@
-import {Container } from "../../Components/Container/Style"
-import { Logo } from "../../Components/Logo/Style"
-import { Title } from "../../Components/Title/Style"
-import { Input } from "../../Components/Input/Style"
-import { LinkMedium } from "../../Components/LinkAccount/Style"
-import { Button, ButtonGoogle } from "../../Components/Button/Style"
-import { ButtonTitle, ButtonTitleGoogle } from "../../Components/ButtonTitle/Style"
+import {Container } from "../../Components/Container/style"
+import { Logo } from "../../Components/Logo/style"
+import { Title } from "../../Components/Title/style"
+import { Button, ButtonGoogle } from "../../Components/Button/style"
+import { LinkMedium } from "../../Components/LinkAccount/style"
+import { ButtonTitle, ButtonTitleGoogle } from "../../Components/ButtonTitle/style"
 import { AntDesign } from '@expo/vector-icons';
-import { ContentAccount } from "../../Components/ContentAccount/Style"
-import { TextAccount } from "../../Components/TextAccount/Style"
-import { LinkAccount } from "../../Components/LinkAccount/Style"
+import { ContentAccount } from "../../Components/ContentAccount/style"
+import { TextAccount } from "../../Components/TextAccount/style"
+import { LinkAccount } from "../../Components/LinkAccount/style"
+import { Input } from "../../Components/Input/style"
 
 
 export const Login = ({ navigation }) => {

@@ -11,6 +11,18 @@ export const Navegacao = ({navigation}) =>{
                 title="RecSenha"
                 onPress={() => navigation.navigate("RecSenha")}
             />
+            <Button
+                title="RedSenha"
+                onPress={() => navigation.navigate("RedSenha")}
+            />
+            <Button
+                title="Cadastro"
+                onPress={() => navigation.navigate("Cadastro")}
+            />
+            <Button
+                title="Verificacao"
+                onPress={() => navigation.navigate("Verificacao")}
+            />
         </View>
     )
 }
