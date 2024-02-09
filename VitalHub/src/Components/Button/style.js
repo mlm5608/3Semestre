@@ -20,3 +20,23 @@ export const ButtonGoogle = styled(Button)`
     flex-direction: row;
     gap: 25px;
 `
+
+export const ButtonPerfil = styled(Button)`
+    margin-top: 30px;
+`
+
+export const ButtonExitApp = styled(Button)`
+
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 44px;
+    background-color: #ACABB7;
+    border: 1px solid #ACABB7;
+    color: #FFFFFF;
+`
+
+export const ButtonPerfilDesativate = styled(ButtonPerfil)`
+    background-color: #ACABB7;
+    border: 1px solid #ACABB7;
+`

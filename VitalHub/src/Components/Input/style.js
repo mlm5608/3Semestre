@@ -34,5 +34,9 @@ export const InputPerfil= styled(Input)`
     color: #33303E;
 `
 export const InputPerfilShort = styled(InputPerfil)`
-    width: 45%;
+    width: 100%;
+`
+
+export const InputPerfilBig = styled(InputPerfil)`
+    height: 120px;
 `

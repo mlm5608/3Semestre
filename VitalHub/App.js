@@ -9,6 +9,7 @@ import { RedSenha } from "./src/Screens/RedSenha/RedSenha";
 import { Cadastro } from "./src/Screens/Cadastro/Cadastro";
 import { Verificacao } from "./src/Screens/Verificacao/Verificacao";
 import { PerfilPaciente } from "./src/Screens/PerfilPaciente/PerfilPaciente";
+import { Prontuario } from "./src/Screens/Protuario/Prontuario";
 
 
 const Stack = createNativeStackNavigator();
@@ -70,7 +71,12 @@ export default function App() {
         <Stack.Screen
         name="PerfilPaciente"
         component={PerfilPaciente}
-        options={{title:"Verificação de email"}}
+        options={{title:"Tela de perfil Paciente"}}
+        />
+        <Stack.Screen
+        name="Prontuario"
+        component={Prontuario}
+        options={{title:"Tela de Protuário"}}
         />
       </Stack.Navigator>
     </NavigationContainer>

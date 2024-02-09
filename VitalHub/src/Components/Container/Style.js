@@ -6,4 +6,7 @@ export const Container = styled.SafeAreaView`
     background-color: #FAFAFA;
 `
 
-export const Container
+export const ContainerScroll = styled.ScrollView`
+   height: 100%;
+   width: 100%;
+`

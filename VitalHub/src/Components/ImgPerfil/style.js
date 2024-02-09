@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ImgPerfil = styled.Image`
-    height: 27%;
-    width: 100%;
+    height: 280px;
+    width: 360px;
     
 `

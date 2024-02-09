@@ -6,4 +6,5 @@ export const LinkB = styled.Text`
     color: #344F8F;
     text-decoration: underline;
     margin-top: 30px;
+    margin-bottom: 33px;
 ` 
