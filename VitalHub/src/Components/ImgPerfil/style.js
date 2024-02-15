@@ -5,3 +5,8 @@ export const ImgPerfil = styled.Image`
     width: 360px;
     
 `
+
+export const ImgPerfilHome = styled(ImgPerfil)`
+    height: 60px;
+    width: 60px;
+`

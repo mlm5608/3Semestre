@@ -10,6 +10,7 @@ import { Cadastro } from "./src/Screens/Cadastro/Cadastro";
 import { Verificacao } from "./src/Screens/Verificacao/Verificacao";
 import { PerfilPaciente } from "./src/Screens/PerfilPaciente/PerfilPaciente";
 import { Prontuario } from "./src/Screens/Protuario/Prontuario";
+import { HomeMedico } from "./src/Screens/HomeMedico/HomeMedico";
 
 
 const Stack = createNativeStackNavigator();
@@ -77,6 +78,11 @@ export default function App() {
         name="Prontuario"
         component={Prontuario}
         options={{title:"Tela de Protuário"}}
+        />
+        <Stack.Screen
+        name="HomeMedico"
+        component={HomeMedico}
+        options={{title:"Tela de Home do Medico"}}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -40,3 +40,16 @@ export const ButtonPerfilDesativate = styled(ButtonPerfil)`
     background-color: #ACABB7;
     border: 1px solid #ACABB7;
 `
+export const PerfilButton = styled.TouchableOpacity`
+    width: 100px;
+    height: 39px;
+    background-color: #FBFBFB;
+    border: 1px solid #607EC5;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+`
+
+export const PerfilButtonSelected = styled(PerfilButton)`
+    background-color: #607EC5;
+`
