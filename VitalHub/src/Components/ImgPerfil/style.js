@@ -10,3 +10,7 @@ export const ImgPerfilHome = styled(ImgPerfil)`
     height: 60px;
     width: 60px;
 `
+export const ImgPerfilHomeCard = styled(ImgPerfil)`
+    height: 80px;
+    width: 80px;
+`

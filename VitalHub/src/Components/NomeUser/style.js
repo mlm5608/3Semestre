@@ -9,3 +9,7 @@ export const DoctorName = styled(NomeUser)`
     font-size: 16px;
     color: #FBFBFB;
 `
+
+export const PacientName = styled(NomeUser)`
+    font-size: 16px;
+`

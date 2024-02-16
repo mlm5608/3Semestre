@@ -6,3 +6,9 @@ export const AgeUser = styled.Text`
     color: #4E4B59;
     margin-bottom: 4px;
 `
+
+export const PacientAge = styled.Text`
+    color: #8C8A97;
+    font-family: "Quicksand_400Regular";
+    margin-bottom:0px;
+`

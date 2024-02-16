@@ -6,9 +6,10 @@ import { InputsBox } from "../../Components/InputsBox/style"
 import { LogoIcon } from "../../Components/Logo/style";
 import { SubEmail, Subtitle } from "../../Components/Subtitle/style";
 import { Title } from "../../Components/Title/style";
-import { LinkB } from "../../Components/LinkB/style"
+
 import { AntDesign } from '@expo/vector-icons';
 import { IconBox } from "../../Components/IconBox/style";
+import { LinkB } from "../../Components/Link/style";
 
 export const Verificacao = ({ navigation }) => {
   return (

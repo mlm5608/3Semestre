@@ -5,10 +5,10 @@ import { ImgPerfil } from "../../Components/ImgPerfil/style"
 import { InputPerfil, InputPerfilBig } from "../../Components/Input/style"
 import { Label } from "../../Components/Label/style"
 import { NomeUser } from "../../Components/NomeUser/style"
-import { LinkB } from "../../Components/LinkB/style";
 import { EmaiUserShort } from "../../Components/EmailUser/style"
 import { AgeUser } from "../../Components/AgeUser/style"
 import { InfosBox } from "../../Components/InfosBox/style"
+import { LinkB } from "../../Components/Link/style"
 
 export const Prontuario = ({ navigation }) => {
     return (
