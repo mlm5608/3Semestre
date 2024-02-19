@@ -1,28 +1,31 @@
 import { LinearGradient } from "expo-linear-gradient"
-import { ButtonsContainer, Container, ContainerHeader } from "../../Components/Container/style"
+import { ButtonsContainer, Container, ContainerFooter, ContainerHeader } from "../../Components/Container/style"
 import { ImgPerfilHome, ImgPerfilHomeCard } from "../../Components/ImgPerfil/style"
-import { MaterialIcons } from '@expo/vector-icons';
 import { DoctorName, PacientName } from "../../Components/NomeUser/style";
 import { TextTemplate } from "../../Components/TextTemplate/style";
 import { InfosBox } from "../../Components/InfosBox/style";
 import { TextsBox } from "../../Components/TextsBox/style";
 import { BoxContent } from "../../Components/BoxContent/style";
-import { PerfilButton, PerfilButtonSelected } from "../../Components/Button/style";
 import { StyledCalendarStrip } from "../../Components/Calendar/style"
-import { TextPerfilButton, TextPerfilButtonSelected } from "../../Components/ButtonTitle/style";
+import { AgeETypeBox, BoxContent2, CardBox, HourELinkBox, OptionBox, } from "../../Components/Box/style";
+import { FontAwesome, FontAwesome5, MaterialIcons } from '@expo/vector-icons';
+import { PacientAge } from "../../Components/AgeUser/style";
+import { HourComponent } from "../../Components/HourComponent/style";
+import { TipoConsulta } from "../../Components/TypeConsult/style";
 import { StyleSheet } from 'react-native';
 // import lib moment
 import moment from "moment";
-import { AgeETypeBox, BoxContent2, CardBox, HourBox, HourELinkBox } from "../../Components/Box/style";
-import { FontAwesome, MaterialCommunityIcons,FontAwesome5 } from '@expo/vector-icons';
-import { PacientAge } from "../../Components/AgeUser/style";
-import {LinkCancel} from "../../Components/Link/style"
-import { Hour } from "../../Components/Hour/style";
-import { TipoConsulta } from "../../Components/TypeConsult/style";
+import { ButtonListAppontment } from "../../Components/BtnListApointment/style";
+import { useState } from "react";
+import { LinkComponent } from "../../Components/LinkComponent/style";
+import { LinkCard } from "../../Components/Link/style";
+
 
 
 
 export const HomeMedico = ({ navigation }) => {
+    const [statusLista, setStatusLista] = useState("pendente")
+
     moment.updateLocale("pt-br", {
 
         //meses
@@ -106,17 +109,21 @@ export const HomeMedico = ({ navigation }) => {
 
             <ButtonsContainer>
 
-                <PerfilButtonSelected>
-                    <TextPerfilButtonSelected>Agendadas</TextPerfilButtonSelected>
-                </PerfilButtonSelected>
-
-                <PerfilButton>
-                    <TextPerfilButton>Realizadas</TextPerfilButton>
-                </PerfilButton>
-
-                <PerfilButton>
-                    <TextPerfilButton>Canceladas</TextPerfilButton>
-                </PerfilButton>
+                <ButtonListAppontment
+                    textButton={"Agendadas"}
+                    clickButton={statusLista === "pendente"}
+                    onPress={() => setStatusLista("pendente")}
+                />
+                <ButtonListAppontment
+                    textButton={"Realizadas"}
+                    clickButton={statusLista === "realizado"}
+                    onPress={() => setStatusLista("realizado")}
+                />
+                <ButtonListAppontment
+                    textButton={"Canceladas"}
+                    clickButton={statusLista === "cancelado"}
+                    onPress={() => setStatusLista("cancelado")}
+                />
 
             </ButtonsContainer>
 
@@ -127,20 +134,21 @@ export const HomeMedico = ({ navigation }) => {
                     <PacientName>Niccole Sarga</PacientName>
                     <AgeETypeBox>
                         <PacientAge>22 anos</PacientAge>
-                        <FontAwesome name="circle" size={3} color="#D9D9D9" alignSelf={"center"}/>
+                        <FontAwesome name="circle" size={3} color="#D9D9D9" alignSelf={"center"} />
                         <TipoConsulta>Rotina</TipoConsulta>
                     </AgeETypeBox>
 
                     <HourELinkBox>
 
-                        <HourBox>
-                            {/* <FontAwesome6 name="clock" size={14} color="#49B3BA" /> */}
-                            <MaterialCommunityIcons name="clock" size={14} color="#49B3BA" />
+                        <HourComponent 
+                        Time='14:00'
+                        listAg={statusLista === "pendente"}
+                        />
 
-                            <Hour>14:00</Hour>
-                        </HourBox>
-
-                        <LinkCancel>Cancelar</LinkCancel>
+                        <LinkComponent
+                        listFunction={statusLista}
+                        title= {statusLista === "pendente" ? "Cancelar": statusLista === "realizado" ? "Ver Prontuário" : "Cancelar" }
+                        />
 
                     </HourELinkBox>
                 </BoxContent2>
@@ -153,20 +161,17 @@ export const HomeMedico = ({ navigation }) => {
                     <PacientName>Richard Kosta</PacientName>
                     <AgeETypeBox>
                         <PacientAge>28 anos</PacientAge>
-                        <FontAwesome name="circle" size={3} color="#D9D9D9" alignSelf={"center"}/>
+                        <FontAwesome name="circle" size={3} color="#D9D9D9" alignSelf={"center"} />
                         <TipoConsulta>Urgência</TipoConsulta>
                     </AgeETypeBox>
 
                     <HourELinkBox>
+                        <HourComponent 
+                            Time='14:00'
+                            listAg={statusLista === "pendente"}
+                        />
 
-                        <HourBox>
-                            {/* <FontAwesome6 name="clock" size={14} color="#49B3BA" /> */}
-                            <MaterialCommunityIcons name="clock" size={14} color="#49B3BA" />
-
-                            <Hour>15:00</Hour>
-                        </HourBox>
-
-                        <LinkCancel>Cancelar</LinkCancel>
+                        <LinkCard>Cancelar</LinkCard>
 
                     </HourELinkBox>
                 </BoxContent2>
@@ -174,18 +179,14 @@ export const HomeMedico = ({ navigation }) => {
 
             <ContainerFooter>
                 <OptionBox>
-                    <MaterialCommunityIcons name="calendar-check-outline" size={18} color="#607EC5" />
-                    <TitleOptionColor>Agenda</TitleOptionColor>
+                    <FontAwesome name="calendar" size={22} color="#607EC5" />
+                    {/* <TitleOption>Agenda</TitleOption> */}
                 </OptionBox>
+
                 <OptionBox>
-                    <FontAwesome5 name="hospital" size={22} color="#4E4B59" />
-                    <TitleOptionColor>Clínicas</TitleOptionColor>
+                    <FontAwesome5 name="user-circle" size={22} color="#4E4B59" />
                 </OptionBox>
-                <OptionBox>
-                    <FontAwesome5 name="hospital" size={22} color="#4E4B59" />
-                    <TitleOptionColor>Clínicas</TitleOptionColor>
-                </OptionBox>
-                
+
             </ContainerFooter>
 
         </Container>

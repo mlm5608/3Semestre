@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const LinkMedium = styled.Text`
     font-size: 14px;
@@ -26,8 +26,10 @@ export const LinkAccount = styled.Text`
     text-decoration: underline;
 `
 
-export const LinkCancel = styled.Text`
+export const LinkCard = styled.Text`
     font-size: 12px;
     font-family: "MontserratAlternates_500Medium";
-    color: #C81D25;
+    
+
+    ${props => props.listFunction === "pendente" ? css`color: #C81D25;`: props.listFunction === "realizado" ? css`color: #344F8F;`: css`color: red;` }
 `

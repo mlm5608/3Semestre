@@ -4,8 +4,9 @@ import { Subtitle } from "../../Components/Subtitle/style";
 import { InputSingIn } from "../../Components/Input/style";
 import { Button } from "../../Components/Button/style";
 import { ButtonTitle } from "../../Components/ButtonTitle/style";
-import { LinkB } from "../../Components/LinkB/style";
+
 import { Title } from "../../Components/Title/style"
+import { LinkB } from "../../Components/Link/style";
 
 export const Cadastro = ({ navigation }) => {
     return (

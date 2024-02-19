@@ -20,7 +20,18 @@ export const ContainerHeader = styled.View`
 
 export const ButtonsContainer = styled.View`
     flex-direction:row;
-    gap: 10px;
     margin-top: 38px;
     margin-bottom: 8px;
+    width: 90%;
+    justify-content: space-around;
+`
+
+export const ContainerFooter = styled.View`
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 26px;
+    background-color: #FFFFFF;
+    border-radius: 10px 10px 0px 0px;
 `

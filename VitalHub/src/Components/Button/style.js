@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Button = styled.TouchableOpacity`
     width: 90%;
@@ -40,16 +40,16 @@ export const ButtonPerfilDesativate = styled(ButtonPerfil)`
     background-color: #ACABB7;
     border: 1px solid #ACABB7;
 `
-export const PerfilButton = styled.TouchableOpacity`
-    width: 100px;
-    height: 39px;
-    background-color: #FBFBFB;
-    border: 1px solid #607EC5;
+export const PerfilButton = styled.TouchableHighlight`
     border-radius: 5px;
-    align-items: center;
+    width: 100px;
+    height: 40px;
     justify-content: center;
-`
 
-export const PerfilButtonSelected = styled(PerfilButton)`
-    background-color: #607EC5;
+    ${props => props.clickButton ? css`
+    background-color: #496bba; ` 
+    : css`
+        background-color: transparent;
+        border: 2px solid #607ec5;
+    `}
 `

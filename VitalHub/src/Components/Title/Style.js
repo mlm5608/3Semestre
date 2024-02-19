@@ -7,3 +7,13 @@ export const Title = styled.Text`
     margin-top: 25px;
     margin-bottom: 5px;
 `
+
+export const TitleOption = styled.Text`
+    font-size: 12px;
+    font-family: "Quicksand_500Medium";
+    color: #4e4b59;
+`
+
+export const TitleOptionColor = styled(TitleOption)`
+    color: #607EC5;
+`

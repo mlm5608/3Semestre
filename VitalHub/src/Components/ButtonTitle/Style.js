@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ButtonTitle = styled.Text`
     font-family: "MontserratAlternates_600SemiBold";
@@ -15,10 +15,11 @@ export const ButtonTitleGoogle = styled(ButtonTitle)`
 export const TextPerfilButton = styled.Text`
     font-size: 12px;
     font-family: 'MontserratAlternates_600SemiBold';
-    color: #607EC5;
-`
-
-export const TextPerfilButtonSelected = styled(TextPerfilButton)`
-    font-size: 12px;
-    color: #FBFBFB;
+    align-self: center;
+    
+    ${props => props.clickButton ? css`
+    color: #fbfbfb; ` 
+    : css`
+        color: #607ec5;
+    `}
 `
