@@ -6,7 +6,7 @@ import { Input } from "../../Components/Input/style"
 import { Button } from "../../Components/Button/style"
 import { ButtonTitle } from "../../Components/ButtonTitle/style"
 import { AntDesign } from '@expo/vector-icons';
-import { IconBox } from "../../Components/IconBox/style"
+import { IconBox } from "../../Components/Box/style"
 
 
 export const RecSenha = ({ navigation }) => {

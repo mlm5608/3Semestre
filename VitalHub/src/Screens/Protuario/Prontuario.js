@@ -7,8 +7,8 @@ import { Label } from "../../Components/Label/style"
 import { NomeUser } from "../../Components/NomeUser/style"
 import { EmaiUserShort } from "../../Components/EmailUser/style"
 import { AgeUser } from "../../Components/AgeUser/style"
-import { InfosBox } from "../../Components/InfosBox/style"
 import { LinkB } from "../../Components/Link/style"
+import { InfosBox } from "../../Components/Box/style"
 
 export const Prontuario = ({ navigation }) => {
     return (

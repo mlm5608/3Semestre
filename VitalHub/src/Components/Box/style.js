@@ -1,6 +1,15 @@
 import styled, { css } from "styled-components";
 
-export const BoxContent2 = styled.View`
+export const BoxContent = styled.View`
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center ;
+    justify-content: space-between;
+    padding: 20px;
+`
+
+export const ProfileContent = styled.View`
     flex-direction: column;
 `
 
@@ -15,6 +24,10 @@ export const CardBox = styled.View`
     justify-content: center;
     align-items: center;
     overflow: scroll;
+    margin: 0px auto;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    elevation: 4px;
 `
 export const AgeETypeBox = styled.View`
     gap: 7px;
@@ -44,10 +57,12 @@ export const HourBox = styled.View`
 `
 
 export const HourELinkBox = styled.View`
+    width: 206px;
     flex-direction: row;
-    gap: 47px;
+    justify-content: space-between;
     margin-top: 15px;
 `
+
 export const OptionBox = styled.View`
     height: 100%;
     width: 50px;
@@ -55,3 +70,39 @@ export const OptionBox = styled.View`
     justify-content: center;
 `
 
+export const IconBox = styled.View`
+    height: 30px;
+    width: 30px;
+    background-color: rgba(73, 179, 186, .15);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    margin-left: 20px;
+    margin-top: 20px;
+`
+
+export const InfosBox = styled.View`
+    width: 240px;
+    flex-direction: row;
+    gap: 20px;
+`
+
+export const TextsBox = styled.View`
+    gap: 3px;
+    height: 41px;
+    width: 105px;
+`
+
+export const InputsBox = styled.View`
+    flex-direction: row;
+    gap: 20px;
+    width: 90%;
+    margin-top: 24px;
+
+`
+
+export const InputBox = styled.View`
+    flex-direction: column;
+    width: 45%;
+`

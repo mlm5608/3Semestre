@@ -1,30 +1,98 @@
 import { LinearGradient } from "expo-linear-gradient"
 import { ButtonsContainer, Container, ContainerFooter, ContainerHeader } from "../../Components/Container/style"
-import { ImgPerfilHome, ImgPerfilHomeCard } from "../../Components/ImgPerfil/style"
-import { DoctorName, PacientName } from "../../Components/NomeUser/style";
+import { ImgPerfilHome } from "../../Components/ImgPerfil/style"
+import { DoctorName } from "../../Components/NomeUser/style";
 import { TextTemplate } from "../../Components/TextTemplate/style";
-import { InfosBox } from "../../Components/InfosBox/style";
-import { TextsBox } from "../../Components/TextsBox/style";
-import { BoxContent } from "../../Components/BoxContent/style";
 import { StyledCalendarStrip } from "../../Components/Calendar/style"
-import { AgeETypeBox, BoxContent2, CardBox, HourELinkBox, OptionBox, } from "../../Components/Box/style";
+import { OptionBox, BoxContent, InfosBox, TextsBox } from "../../Components/Box/style";
 import { FontAwesome, FontAwesome5, MaterialIcons } from '@expo/vector-icons';
-import { PacientAge } from "../../Components/AgeUser/style";
-import { HourComponent } from "../../Components/HourComponent/style";
-import { TipoConsulta } from "../../Components/TypeConsult/style";
 import { StyleSheet } from 'react-native';
 // import lib moment
 import moment from "moment";
 import { ButtonListAppontment } from "../../Components/BtnListApointment/style";
 import { useState } from "react";
-import { LinkComponent } from "../../Components/LinkComponent/style";
-import { LinkCard } from "../../Components/Link/style";
+import { ListComponent } from "../../Components/List/List";
+import { CardComponent } from "../../Components/Card/Card";
 
 
 
 
 export const HomeMedico = ({ navigation }) => {
     const [statusLista, setStatusLista] = useState("pendente")
+    const [dadosPaciente, setDadosPaciente] = useState([
+        {
+          id: "1",
+          name: "Vagner",
+          type: "Rotina",
+          age: "22",
+          horario: "14:00",
+          srcImage: 'fotoNiccole',
+          situacao: "pendente"
+        },
+        {
+          id: "2",
+          name: "Kleber",
+          type: "Urgência",
+          age: "28",
+          horario: "15:00",
+          srcImage: 'fotoRichard',
+          situacao: "cancelado"
+        },
+        {
+          id: "3",
+          name: "Robinho",
+          type: "Rotina",
+          age: "22",
+          horario: "14:00",
+          srcImage: 'fotoNiccole',
+          situacao: "realizado"
+        },
+        {
+          id: "4",
+          name: "Valdisney",
+          type: "Urgência",
+          age: "28",
+          horario: "15:00",
+          srcImage: 'fotoRichard',
+          situacao: "cancelado"
+        },
+        {
+          id: "5",
+          name: "Jobson",
+          type: "Rotina",
+          age: "22",
+          horario: "14:00",
+          srcImage: 'fotoNiccole',
+          situacao: "cancelado"
+        },
+        {
+          id: "6",
+          name: "Vilma",
+          type: "Urgência",
+          age: "28",
+          horario: "15:00",
+          srcImage: 'fotoRichard',
+          situacao: "realizado"
+        },
+        {
+          id: "7",
+          name: "Samanda",
+          type: "Rotina",
+          age: "22",
+          horario: "14:00",
+          srcImage: 'fotoNiccole',
+          situacao: "pendente"
+        },
+        {
+          id: "8",
+          name: "Robson",
+          type: "Urgência",
+          age: "28",
+          horario: "15:00",
+          srcImage: 'fotoRichard',
+          situacao: "pendente"
+        },
+      ]);
 
     moment.updateLocale("pt-br", {
 
@@ -127,55 +195,12 @@ export const HomeMedico = ({ navigation }) => {
 
             </ButtonsContainer>
 
-            <CardBox>
-                <ImgPerfilHomeCard source={require("../../Assets/fotoNiccole.png")} />
-
-                <BoxContent2>
-                    <PacientName>Niccole Sarga</PacientName>
-                    <AgeETypeBox>
-                        <PacientAge>22 anos</PacientAge>
-                        <FontAwesome name="circle" size={3} color="#D9D9D9" alignSelf={"center"} />
-                        <TipoConsulta>Rotina</TipoConsulta>
-                    </AgeETypeBox>
-
-                    <HourELinkBox>
-
-                        <HourComponent 
-                        Time='14:00'
-                        listAg={statusLista === "pendente"}
-                        />
-
-                        <LinkComponent
-                        listFunction={statusLista}
-                        title= {statusLista === "pendente" ? "Cancelar": statusLista === "realizado" ? "Ver Prontuário" : "Cancelar" }
-                        />
-
-                    </HourELinkBox>
-                </BoxContent2>
-            </CardBox>
-
-            <CardBox>
-                <ImgPerfilHomeCard source={require("../../Assets/fotoRichard.png")} />
-
-                <BoxContent2>
-                    <PacientName>Richard Kosta</PacientName>
-                    <AgeETypeBox>
-                        <PacientAge>28 anos</PacientAge>
-                        <FontAwesome name="circle" size={3} color="#D9D9D9" alignSelf={"center"} />
-                        <TipoConsulta>Urgência</TipoConsulta>
-                    </AgeETypeBox>
-
-                    <HourELinkBox>
-                        <HourComponent 
-                            Time='14:00'
-                            listAg={statusLista === "pendente"}
-                        />
-
-                        <LinkCard>Cancelar</LinkCard>
-
-                    </HourELinkBox>
-                </BoxContent2>
-            </CardBox>
+            <ListComponent 
+            data={dadosPaciente}
+            renderItem={ ({item}) => statusLista === item.situacao ?  <CardComponent situação={statusLista} onpressCancel={null} onPressApointment={null} dados={item} /> : <></>}
+            keyExtractor={item => {item.id}}
+            />
+            
 
             <ContainerFooter>
                 <OptionBox>
