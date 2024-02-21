@@ -53,3 +53,7 @@ export const PerfilButton = styled.TouchableHighlight`
         border: 2px solid #607ec5;
     `}
 `
+
+export const ButtonModal = styled(Button)`
+    width: 95%;
+`

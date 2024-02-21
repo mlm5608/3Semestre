@@ -2,14 +2,14 @@ import { Button } from "../../Components/Button/style";
 import { ButtonTitle } from "../../Components/ButtonTitle/style";
 import { Container } from "../../Components/Container/style";
 import { InputVerify } from "../../Components/Input/style";
-import { InputsBox } from "../../Components/InputsBox/style"
+
 import { LogoIcon } from "../../Components/Logo/style";
 import { SubEmail, Subtitle } from "../../Components/Subtitle/style";
 import { Title } from "../../Components/Title/style";
-
 import { AntDesign } from '@expo/vector-icons';
-import { IconBox } from "../../Components/IconBox/style";
+
 import { LinkB } from "../../Components/Link/style";
+import { IconBox, InputsBox } from "../../Components/Box/style";
 
 export const Verificacao = ({ navigation }) => {
   return (

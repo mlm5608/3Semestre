@@ -1,10 +1,10 @@
+import { InputBox, InputsBox } from "../../Components/Box/style"
 import { ButtonExitApp, ButtonPerfil } from "../../Components/Button/style"
 import { ButtonTitle } from "../../Components/ButtonTitle/style"
 import { Container, ContainerScroll } from "../../Components/Container/style"
 import { EmailUser } from "../../Components/EmailUser/style"
 import { ImgPerfil } from "../../Components/ImgPerfil/style"
 import { InputPerfil, InputPerfilShort } from "../../Components/Input/style"
-import { InputBox, InputsBox } from "../../Components/InputsBox/style"
 import { Label } from "../../Components/Label/style"
 import { NomeUser } from "../../Components/NomeUser/style"
 

@@ -1,7 +1,7 @@
+import { IconBox } from '../../Components/Box/style'
 import { Button } from '../../Components/Button/style'
 import { ButtonTitle } from '../../Components/ButtonTitle/style'
 import { Container } from '../../Components/Container/style'
-import { IconBox } from '../../Components/IconBox/style'
 import { Input } from '../../Components/Input/style'
 import { LogoIcon } from '../../Components/Logo/style'
 import { Subtitle } from '../../Components/Subtitle/style'

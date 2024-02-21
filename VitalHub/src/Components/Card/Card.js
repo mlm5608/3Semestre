@@ -35,7 +35,7 @@ export const CardComponent = ({
 
                     <LinkComponent
                         listFunction={situação}
-                        functionButton={situação === "pendente"? onpressCancel : situação === "realizada"? onPressApointment : null}
+                        functionButton={situação === "pendente"? onpressCancel : situação === "realizado"? onPressApointment : null}
                     />
 
                 </HourELinkBox>

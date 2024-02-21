@@ -13,16 +13,23 @@ import { ButtonListAppontment } from "../../Components/BtnListApointment/style";
 import { useState } from "react";
 import { ListComponent } from "../../Components/List/List";
 import { CardComponent } from "../../Components/Card/Card";
+import { CancelattionModal } from "../../Components/CancelattionModal/CancelattionModal";
+import { AppointmentModal } from "../../Components/AppointmentModal/AppointmentModal";
 
 
 
 
 export const HomeMedico = ({ navigation }) => {
+
+    const [showModalCancel,setShowModalCancel] = useState(false)
+    const [showModalAppointment,setShowModalAppointment] = useState(false)
+    const [nomePaciente,setNomePaciente] = useState("")
+
     const [statusLista, setStatusLista] = useState("pendente")
     const [dadosPaciente, setDadosPaciente] = useState([
         {
           id: "1",
-          name: "Vagner",
+          name: "Vagner Soares",
           type: "Rotina",
           age: "22",
           horario: "14:00",
@@ -31,7 +38,7 @@ export const HomeMedico = ({ navigation }) => {
         },
         {
           id: "2",
-          name: "Kleber",
+          name: "Kleber Kosta",
           type: "Urgência",
           age: "28",
           horario: "15:00",
@@ -40,7 +47,7 @@ export const HomeMedico = ({ navigation }) => {
         },
         {
           id: "3",
-          name: "Robinho",
+          name: "Robinho Carl",
           type: "Rotina",
           age: "22",
           horario: "14:00",
@@ -49,7 +56,7 @@ export const HomeMedico = ({ navigation }) => {
         },
         {
           id: "4",
-          name: "Valdisney",
+          name: "Valdisney de Souza",
           type: "Urgência",
           age: "28",
           horario: "15:00",
@@ -58,7 +65,7 @@ export const HomeMedico = ({ navigation }) => {
         },
         {
           id: "5",
-          name: "Jobson",
+          name: "Jobson Azevedo",
           type: "Rotina",
           age: "22",
           horario: "14:00",
@@ -67,7 +74,7 @@ export const HomeMedico = ({ navigation }) => {
         },
         {
           id: "6",
-          name: "Vilma",
+          name: "Vilma Ribeiro",
           type: "Urgência",
           age: "28",
           horario: "15:00",
@@ -76,7 +83,7 @@ export const HomeMedico = ({ navigation }) => {
         },
         {
           id: "7",
-          name: "Samanda",
+          name: "Samanda Guimarães",
           type: "Rotina",
           age: "22",
           horario: "14:00",
@@ -85,14 +92,14 @@ export const HomeMedico = ({ navigation }) => {
         },
         {
           id: "8",
-          name: "Robson",
+          name: "Robson Queirós",
           type: "Urgência",
           age: "28",
           horario: "15:00",
           srcImage: 'fotoRichard',
           situacao: "pendente"
         },
-      ]);
+    ]);
 
     moment.updateLocale("pt-br", {
 
@@ -197,8 +204,20 @@ export const HomeMedico = ({ navigation }) => {
 
             <ListComponent 
             data={dadosPaciente}
-            renderItem={ ({item}) => statusLista === item.situacao ?  <CardComponent situação={statusLista} onpressCancel={null} onPressApointment={null} dados={item} /> : <></>}
+            renderItem={ ({item}) => statusLista === item.situacao ?  
+            <CardComponent 
+                situação={statusLista} 
+                onpressCancel={() => setShowModalCancel(true)} 
+                onPressApointment={() => {
+                    setShowModalAppointment(true)
+                    setNomePaciente(item.name)
+                }} 
+                dados={item} /> 
+            : 
+            <></>}
+
             keyExtractor={item => {item.id}}
+            showsVerticalScrollIndicator={false}
             />
             
 
@@ -214,8 +233,21 @@ export const HomeMedico = ({ navigation }) => {
 
             </ContainerFooter>
 
+            {/* modal cancelar */}
+            <CancelattionModal
+                visible={showModalCancel}
+                setShowModalCancel={setShowModalCancel}
+            />
+
+            {/* modal ver prontuario */}
+            <AppointmentModal
+                visible={showModalAppointment}
+                setShowModalAppointment={setShowModalAppointment}
+                NomePaciente={nomePaciente}
+            />
+
         </Container>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
