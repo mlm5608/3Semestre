@@ -91,7 +91,6 @@ export const InfosBox = styled.View`
 export const TextsBox = styled.View`
     gap: 3px;
     height: 41px;
-    width: 105px;
 `
 
 export const InputsBox = styled.View`

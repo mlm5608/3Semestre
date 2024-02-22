@@ -37,3 +37,33 @@ export const AppointmentModal = ({
         </Modal>
     )
 }
+
+export const ConsultLocalModal = ({
+    visible,
+    setOnpress,
+    item,
+    ...rest
+}) => {
+    return (
+        <Modal {...rest} visible={visible} transparent={true} animationType="fade">
+            {/* container */}
+            <PatientModal>
+                <ModalContent>
+                    <ImgModal source={require("../../Assets/ModalImage2.png")} />
+                    <Title>{item.name}</Title>
+
+                    <InfosBoxModal>
+                        <AgeUser>{item.age} Anos</AgeUser>
+                        <EmaiUserShort>{item.email}</EmaiUserShort>
+                    </InfosBoxModal>
+
+                    <ButtonModal>
+                        <ButtonTitle>ver local da consulta</ButtonTitle>
+                    </ButtonModal>
+
+                    <LinkB onPress={() => setOnpress(false)}>Cancelar</LinkB>
+                </ModalContent>
+            </PatientModal>
+        </Modal>
+    )
+}

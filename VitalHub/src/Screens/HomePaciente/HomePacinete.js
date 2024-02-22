@@ -12,92 +12,57 @@ import moment from "moment";
 import { ButtonListAppontment } from "../../Components/BtnListApointment/style";
 import { useState } from "react";
 import { ListComponent } from "../../Components/List/List";
-import { CardComponent } from "../../Components/Card/Card";
-import { CancelattionModal } from "../../Components/CancelattionModal/CancelattionModal";
-import { AppointmentModal } from "../../Components/AppointmentModal/AppointmentModal";
+import { CardComponentP } from "../../Components/Card/Card";
+import { CancelattionModalP } from "../../Components/CancelattionModal/CancelattionModal";
+import { FontAwesome6 } from '@expo/vector-icons';
+import { ButtonScheduleConsult } from "../../Components/Button/style";
+import { ConsultLocalModal } from "../../Components/AppointmentModal/AppointmentModal";
+import { ScheduleConsultModal } from "../../Components/ScheduleConsultModal/ScheduleConsultModal";
 
 
 
 
-export const HomeMedico = ({ navigation }) => {
+export const HomePaciente = ({ navigation }) => {
 
     const [showModalCancel,setShowModalCancel] = useState(false)
-    const [showModalAppointment,setShowModalAppointment] = useState(false)
-    const [nomePaciente,setNomePaciente] = useState("")
+    const [showConsultLocalModal, setShowConsultLocalModal] = useState(false)
+    const [medicInfos, setMedicInfos] = useState({})
+    const [showScheduleConsultModal, setShowScheduleConsultModal] = useState(false)
 
     const [statusLista, setStatusLista] = useState("pendente")
-    const [dadosPaciente, setDadosPaciente] = useState([
+    const [dadosConsulta, setDadosConsulta] = useState([
         {
           id: "1",
-          name: "Vagner Soares",
+          name: "Dr. Claudio",
           type: "Rotina",
           age: "22",
           horario: "14:00",
-          srcImage: 'fotoNiccole',
-          situacao: "pendente"
+          situacao: "pendente",
+          crm: "13490",
+          especialidade: "cardiologista",
+          email:"Claudiomedic@gmail.com"
         },
         {
           id: "2",
-          name: "Kleber Kosta",
+          name: "Dr. Robs",
           type: "Urgência",
           age: "28",
           horario: "15:00",
-          srcImage: 'fotoRichard',
-          situacao: "cancelado"
+          situacao: "cancelado",
+          crm: "13490",
+          especialidade: "cardiologista",
+          email:"Robsmedic@gmail.com"
         },
         {
           id: "3",
-          name: "Robinho Carl",
+          name: "Dra. Ursûla",
           type: "Rotina",
-          age: "22",
+          age: "26",
           horario: "14:00",
-          srcImage: 'fotoNiccole',
-          situacao: "realizado"
-        },
-        {
-          id: "4",
-          name: "Valdisney de Souza",
-          type: "Urgência",
-          age: "28",
-          horario: "15:00",
-          srcImage: 'fotoRichard',
-          situacao: "cancelado"
-        },
-        {
-          id: "5",
-          name: "Jobson Azevedo",
-          type: "Rotina",
-          age: "22",
-          horario: "14:00",
-          srcImage: 'fotoNiccole',
-          situacao: "cancelado"
-        },
-        {
-          id: "6",
-          name: "Vilma Ribeiro",
-          type: "Urgência",
-          age: "28",
-          horario: "15:00",
-          srcImage: 'fotoRichard',
-          situacao: "realizado"
-        },
-        {
-          id: "7",
-          name: "Samanda Guimarães",
-          type: "Rotina",
-          age: "22",
-          horario: "14:00",
-          srcImage: 'fotoNiccole',
-          situacao: "pendente"
-        },
-        {
-          id: "8",
-          name: "Robson Queirós",
-          type: "Urgência",
-          age: "28",
-          horario: "15:00",
-          srcImage: 'fotoRichard',
-          situacao: "pendente"
+          situacao: "realizado",
+          crm: "13490",
+          especialidade: "cardiologista",
+          email:"Ursulamedic@gmail.com"
         },
     ]);
 
@@ -132,11 +97,11 @@ export const HomeMedico = ({ navigation }) => {
                 <LinearGradient colors={['rgba(96,191,197,1)', 'rgba(73,107,186,1)']} flex={1} start={{ x: -0.05, y: 1.08 }} end={{ x: 1, y: 0 }}>
                     <BoxContent>
                         <InfosBox>
-                            <ImgPerfilHome source={require("../../Assets/ImgPerfilHome.png")} />
+                            <ImgPerfilHome source={require("../../Assets/fotoRichard.png")} />
 
                             <TextsBox>
                                 <TextTemplate>bem vindo</TextTemplate>
-                                <DoctorName>Dr. Claudio</DoctorName>
+                                <DoctorName> Richard Costa</DoctorName>
                             </TextsBox>
                             
                         </InfosBox>
@@ -202,47 +167,39 @@ export const HomeMedico = ({ navigation }) => {
             </ButtonsContainer>
 
             <ListComponent 
-            data={dadosPaciente}
+            data={dadosConsulta}
             renderItem={ ({item}) => statusLista === item.situacao ?  
-            <CardComponent 
+            <CardComponentP
                 situação={statusLista} 
                 onpressCancel={() => setShowModalCancel(true)} 
-                onPressApointment={() => {
-                    setShowModalAppointment(true)
-                    setNomePaciente(item.name)
-                }} 
+                onPressInfo={() => { setShowConsultLocalModal(true); setMedicInfos(item);}}
+                onPressPront={() => {{/*Navega para a tela de Prontuario*/}}}
                 dados={item} /> 
             : 
             <></>}
-
             keyExtractor={item => {item.id}}
             showsVerticalScrollIndicator={false}
             />
             
-
-            <ContainerFooter>
-                <OptionBox>
-                    <FontAwesome name="calendar" size={22} color="#607EC5" />
-                    {/* <TitleOption>Agenda</TitleOption> */}
-                </OptionBox>
-
-                <OptionBox>
-                    <FontAwesome5 name="user-circle" size={22} color="#4E4B59" />
-                </OptionBox>
-
-            </ContainerFooter>
+            <ButtonScheduleConsult onPress={() => setShowScheduleConsultModal(true)}>
+                <FontAwesome6 name="stethoscope" size={32} color="#FBFBFB" />
+            </ButtonScheduleConsult>
 
             {/* modal cancelar */}
-            <CancelattionModal
+            <CancelattionModalP
                 visible={showModalCancel}
                 setShowModalCancel={setShowModalCancel}
             />
 
-            {/* modal ver prontuario */}
-            <AppointmentModal
-                visible={showModalAppointment}
-                setShowModalAppointment={setShowModalAppointment}
-                NomePaciente={nomePaciente}
+            <ConsultLocalModal 
+                visible={showConsultLocalModal}
+                setOnpress={setShowConsultLocalModal}
+                item={medicInfos}
+            />
+
+            <ScheduleConsultModal
+                visible={showScheduleConsultModal}
+                setOnpress={setShowScheduleConsultModal}
             />
 
         </Container>

@@ -57,3 +57,34 @@ export const PerfilButton = styled.TouchableHighlight`
 export const ButtonModal = styled(Button)`
     width: 95%;
 `
+
+export const ButtonScheduleConsult = styled.TouchableOpacity`
+    background-color: #49B3BA;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    margin-right: 21px;
+    margin-bottom: 16px;
+    border: 1px solid #49B3BA;
+    border-radius: 7px;
+    elevation: 4px;
+`
+
+export const TypeConsultButton = styled.TouchableHighlight`
+    width: 30%;
+    border-radius: 5px;
+    padding: 20px 20px 10px 10px;
+    border: 1px solid #60BFC5;
+
+    ${props => props.clickButton ? 
+    css`
+        background-color: #60BFC5;
+        
+    `
+    :
+    css`
+        background-color: white;
+    `}
+`

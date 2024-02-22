@@ -29,3 +29,27 @@ export const CancelattionModal = ({
         </Modal>
     )
 }
+
+export const CancelattionModalP = ({
+    visible,
+    setShowModalCancel,
+    ...rest
+}) =>{
+    return(
+        <Modal {...rest} visible={visible} transparent={true} animationType="fade">
+            {/* container */}
+            <PatientModal>
+                <ModalContent>
+                    <Title>Cancelar consulta</Title>
+                    <ModalText>Ao cancelar essa consulta, talvez não consiga marcar uma nova em um dia/horário próximo, deseja mesmo cancelar essa consulta?</ModalText>
+
+                    <ButtonModal>
+                        <ButtonTitle>Confirmar</ButtonTitle>
+                    </ButtonModal>
+
+                    <LinkB onPress={() => setShowModalCancel(false)}>Cancelar</LinkB>
+                </ModalContent>
+            </PatientModal>
+        </Modal>
+    )
+}

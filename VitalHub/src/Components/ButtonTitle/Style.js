@@ -23,3 +23,4 @@ export const TextPerfilButton = styled.Text`
         color: #607ec5;
     `}
 `
+
