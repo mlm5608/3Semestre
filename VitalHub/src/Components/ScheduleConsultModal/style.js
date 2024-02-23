@@ -14,11 +14,13 @@ export const LabelModal = styled.Text`
     font-size: 14px;
     font-family: "Quicksand_600SemiBold";
     color: #000000;
+    margin-top: 20px;
 `
 
 export const ButtonContent = styled.View`
-    width: 90%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
+    margin-top: 10px;
+    gap: 10px;
 `

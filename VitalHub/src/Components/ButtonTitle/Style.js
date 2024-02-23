@@ -24,3 +24,17 @@ export const TextPerfilButton = styled.Text`
     `}
 `
 
+export const TextTypeConsultButton = styled.Text`
+    font-size: 13px;
+    font-family: 'MontserratAlternates_600SemiBold';
+
+    ${props => props.clickButton ? 
+    css`
+        color: white;
+        
+    `
+    :
+    css`
+        color: #34898F;
+    `}
+`

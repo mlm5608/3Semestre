@@ -17,3 +17,7 @@ export const TitleOption = styled.Text`
 export const TitleOptionColor = styled(TitleOption)`
     color: #607EC5;
 `
+
+export const TitleSc = styled(Title)`
+    margin-bottom: 23px;
+`

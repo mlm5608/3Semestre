@@ -35,3 +35,10 @@ export const ContainerFooter = styled.View`
     background-color: #FFFFFF;
     border-radius: 10px 10px 0px 0px;
 `
+
+export const COntentSelect = styled.View`
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+`

@@ -200,6 +200,8 @@ export const HomePaciente = ({ navigation }) => {
             <ScheduleConsultModal
                 visible={showScheduleConsultModal}
                 setOnpress={setShowScheduleConsultModal}
+                navigateMedic={{/*função de navegação para tela de selecionar médico*/}}
+                navigateLocal={{/* função de navegação para a tela de slecionar clinica*/}}
             />
 
         </Container>

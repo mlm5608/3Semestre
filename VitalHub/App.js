@@ -12,6 +12,7 @@ import { PerfilPaciente } from "./src/Screens/PerfilPaciente/PerfilPaciente";
 import { Prontuario } from "./src/Screens/Protuario/Prontuario";
 import { HomeMedico } from "./src/Screens/HomeMedico/HomeMedico";
 import { HomePaciente } from "./src/Screens/HomePaciente/HomePacinete";
+import { ClinicSelect } from "./src/Screens/ClinicSelect/ClinicSelect";
 
 const Stack = createNativeStackNavigator();
 
@@ -89,6 +90,11 @@ export default function App() {
         name="HomePaciente"
         component={HomePaciente}
         options={{title:"Tela de Home do Paciente"}}
+        />
+        <Stack.Screen
+        name="ClinicSelect"
+        component={ClinicSelect}
+        options={{title:"Tela de Selecção de Clinica"}}
         />
       </Stack.Navigator>
     </NavigationContainer>

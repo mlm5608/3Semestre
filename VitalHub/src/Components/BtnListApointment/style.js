@@ -1,5 +1,5 @@
-import { PerfilButton } from "../Button/style";
-import { TextPerfilButton } from "../ButtonTitle/style";
+import { PerfilButton, TypeConsultButton } from "../Button/style";
+import { TextPerfilButton, TextTypeConsultButton } from "../ButtonTitle/style";
 
 
 export const ButtonListAppontment = ({

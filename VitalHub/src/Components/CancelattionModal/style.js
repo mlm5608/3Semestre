@@ -5,7 +5,6 @@ export const PatientModal = styled.View`
     align-items: center;
     justify-content: center;
     background-color: rgba(0,0,0,0.6);
-
 `
 
 export const ModalContent = styled.View`
@@ -24,4 +23,9 @@ export const ModalText = styled.Text`
     text-align: center;
     margin-top: 10px;
     font-family: "Quicksand_500Medium";
+`
+
+export const PatientModalH = styled(PatientModal)`
+    align-items: center;
+    justify-content: flex-end;
 `

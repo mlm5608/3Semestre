@@ -73,10 +73,12 @@ export const ButtonScheduleConsult = styled.TouchableOpacity`
 `
 
 export const TypeConsultButton = styled.TouchableHighlight`
-    width: 30%;
+    width: 88px;
+    height: 40px;
     border-radius: 5px;
-    padding: 20px 20px 10px 10px;
-    border: 1px solid #60BFC5;
+    border: 2px solid #60BFC5;
+    justify-content: center;
+    align-items: center;
 
     ${props => props.clickButton ? 
     css`
