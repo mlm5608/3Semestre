@@ -67,7 +67,7 @@ export const ButtonScheduleConsult = styled.TouchableOpacity`
     height: 60px;
     align-self: flex-end;
     margin-right: 21px;
-    margin-bottom: 16px;
+    margin-bottom: 74px;
     border: 1px solid #49B3BA;
     border-radius: 7px;
     elevation: 4px;

@@ -140,9 +140,8 @@ export const BoxInfosClinic = styled.View`
     elevation: 15px;
     align-items: center;
     
-<<<<<<< HEAD
-`
 
+`
 export const ButtonsBox = styled.View`
     width: 90%;
     flex-direction: row;
@@ -150,6 +149,4 @@ export const ButtonsBox = styled.View`
     align-items: center;
     margin-top: 10px;
     gap: 60px;
-=======
->>>>>>> 739be4765e9108948839652a4a97675cf1af981b
 `

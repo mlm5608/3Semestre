@@ -16,10 +16,7 @@ import { ClinicSelect } from "./src/Screens/ClinicSelect/ClinicSelect";
 import { MedicSelect } from "./src/Screens/MedicSelect/MedicSelect";
 import { DateSelect } from "./src/Screens/DateSelect/DateSelect";
 import { LocalConsulta } from "./src/Screens/LocalConsulta/LocalConsulta";
-<<<<<<< HEAD
 import { ProntuarioPaciente } from "./src/Screens/ProntuarioPaciente/ProntuarioPaciente";
-=======
->>>>>>> 739be4765e9108948839652a4a97675cf1af981b
 
 const Stack = createNativeStackNavigator();
 
@@ -49,46 +46,49 @@ export default function App() {
 
     <NavigationContainer>
       <Stack.Navigator>
+
         <Stack.Screen
         name="Navegação" 
         component={Navegacao}
         options={{title:"Navegação"}}
         />
+
         <Stack.Screen
         name="Login" 
         component={Login}
-        options={{title:"Login"}}
+        options={{title:"Login", headerShown: false}}
         />
         <Stack.Screen
         name="RecSenha" 
         component={RecSenha}
-        options={{title:"Recuperação de senha"}}
+        options={{title:"Recuperação de senha", headerShown: false}}
         />
         <Stack.Screen
         name="RedSenha" 
         component={RedSenha}
-        options={{title:"Redefinição de senha"}}
+        options={{title:"Redefinição de senha", headerShown: false}}
         />
         <Stack.Screen
         name="Cadastro"
         component={Cadastro}
-        options={{title:"Cadastro de usuario"}}
+        options={{title:"Cadastro de usuario", headerShown: false}}
         />
         <Stack.Screen
         name="Verificacao"
         component={Verificacao}
-        options={{title:"Verificação de email"}}
+        options={{title:"Verificação de email", headerShown: false}}
         />
         <Stack.Screen
         name="PerfilPaciente"
         component={PerfilPaciente}
-        options={{title:"perfil Paciente"}}
+        options={{title:"perfil Paciente", headerShown: false}}
         />
         <Stack.Screen
         name="Prontuario"
         component={Prontuario}
-        options={{title:"Protuário"}}
+        options={{title:"Protuário", headerShown: false}}
         />
+
         <Stack.Screen
         name="HomeMedico"
         component={HomeMedico}
@@ -99,34 +99,38 @@ export default function App() {
         component={HomePaciente}
         options={{title:"Home do Paciente"}}
         />
+
+        {/* <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{title: "Tela Home", headerShown: false0}}
+        /> */}
+
         <Stack.Screen
         name="ClinicSelect"
         component={ClinicSelect}
-        options={{title:"Seleção de Clinica"}}
+        options={{title:"Seleção de Clinica", headerShown: false}}
         />
         <Stack.Screen
         name="MedicSelect"
         component={MedicSelect}
-        options={{title:"Seleção de Médico"}}
+        options={{title:"Seleção de Médico", headerShown: false}}
         />
         <Stack.Screen
         name="DateSelect"
         component={DateSelect}
-        options={{title:"Seleção de data"}}
+        options={{title:"Seleção de data", headerShown: false}}
         />
         <Stack.Screen
         name="LocalConsulta"
         component={LocalConsulta}
-        options={{title:"Local da consulta"}}
-<<<<<<< HEAD
+        options={{title:"Local da consulta", headerShown: false}}
         />
-        <Stack.Screen
-        name="ProntuarioPaciente"
-        component={ProntuarioPaciente}
-        options={{title:"Prontuário do Paciente"}}
-=======
->>>>>>> 739be4765e9108948839652a4a97675cf1af981b
-        />
+
+        {/* <Stack.Screen
+        name="Main"
+        component={Main}
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
