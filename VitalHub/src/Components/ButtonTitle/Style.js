@@ -38,13 +38,3 @@ export const TextTypeConsultButton = styled.Text`
         color: #34898F;
     `}
 `
-<<<<<<< HEAD
-
-
-export const TextButtonSave = styled.Text`
-    color: white;
-    font-size: 14px;
-    font-family: "MontserratAlternates_700Bold";
-`
-=======
->>>>>>> 739be4765e9108948839652a4a97675cf1af981b

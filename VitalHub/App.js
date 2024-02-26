@@ -2,7 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Navegacao } from "./src/Screens/Navegacao/Navegacao";
 import { Login } from "./src/Screens/Login/Login";
-import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold } from "@expo-google-fonts/montserrat-alternates";
+import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium } from "@expo-google-fonts/montserrat-alternates";
 import {Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_400Regular} from "@expo-google-fonts/quicksand";
 import { RecSenha } from "./src/Screens/RecSenha/RecSenha";
 import { RedSenha } from "./src/Screens/RedSenha/RedSenha";
@@ -13,13 +13,6 @@ import { Prontuario } from "./src/Screens/Protuario/Prontuario";
 import { HomeMedico } from "./src/Screens/HomeMedico/HomeMedico";
 import { HomePaciente } from "./src/Screens/HomePaciente/HomePacinete";
 import { ClinicSelect } from "./src/Screens/ClinicSelect/ClinicSelect";
-import { MedicSelect } from "./src/Screens/MedicSelect/MedicSelect";
-import { DateSelect } from "./src/Screens/DateSelect/DateSelect";
-import { LocalConsulta } from "./src/Screens/LocalConsulta/LocalConsulta";
-<<<<<<< HEAD
-import { ProntuarioPaciente } from "./src/Screens/ProntuarioPaciente/ProntuarioPaciente";
-=======
->>>>>>> 739be4765e9108948839652a4a97675cf1af981b
 
 const Stack = createNativeStackNavigator();
 
@@ -30,8 +23,7 @@ export default function App() {
     MontserratAlternates_500Medium,
     Quicksand_500Medium,
     Quicksand_600SemiBold,
-    Quicksand_400Regular,
-    MontserratAlternates_700Bold
+    Quicksand_400Regular
   })
 
   if (!fontsLoaded && !fontError) {
@@ -82,50 +74,27 @@ export default function App() {
         <Stack.Screen
         name="PerfilPaciente"
         component={PerfilPaciente}
-        options={{title:"perfil Paciente"}}
+        options={{title:"Tela de perfil Paciente"}}
         />
         <Stack.Screen
         name="Prontuario"
         component={Prontuario}
-        options={{title:"Protuário"}}
+        options={{title:"Tela de Protuário"}}
         />
         <Stack.Screen
         name="HomeMedico"
         component={HomeMedico}
-        options={{title:"Home do Medico"}}
+        options={{title:"Tela de Home do Medico"}}
         />
         <Stack.Screen
         name="HomePaciente"
         component={HomePaciente}
-        options={{title:"Home do Paciente"}}
+        options={{title:"Tela de Home do Paciente"}}
         />
         <Stack.Screen
         name="ClinicSelect"
         component={ClinicSelect}
-        options={{title:"Seleção de Clinica"}}
-        />
-        <Stack.Screen
-        name="MedicSelect"
-        component={MedicSelect}
-        options={{title:"Seleção de Médico"}}
-        />
-        <Stack.Screen
-        name="DateSelect"
-        component={DateSelect}
-        options={{title:"Seleção de data"}}
-        />
-        <Stack.Screen
-        name="LocalConsulta"
-        component={LocalConsulta}
-        options={{title:"Local da consulta"}}
-<<<<<<< HEAD
-        />
-        <Stack.Screen
-        name="ProntuarioPaciente"
-        component={ProntuarioPaciente}
-        options={{title:"Prontuário do Paciente"}}
-=======
->>>>>>> 739be4765e9108948839652a4a97675cf1af981b
+        options={{title:"Tela de Selecção de Clinica"}}
         />
       </Stack.Navigator>
     </NavigationContainer>

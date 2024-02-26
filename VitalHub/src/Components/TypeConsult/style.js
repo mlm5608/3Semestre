@@ -5,7 +5,3 @@ export const TipoConsulta = styled.Text`
     font-family: "Quicksand_600SemiBold" ;
     color: #8C8A97;
 `
-
-export const CidadeClinic = styled(TipoConsulta)`
-    color: #4E4B59;
-`

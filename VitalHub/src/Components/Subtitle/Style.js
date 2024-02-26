@@ -16,11 +16,3 @@ export const SubEmail = styled(Subtitle)`
     margin-top: -5px;
     margin-bottom: 5px;
 `
-
-export const SubtitleBlack = styled(Subtitle)`
-    color: black;
-    margin-top: 16px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    width: 100%;
-`

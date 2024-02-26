@@ -40,7 +40,3 @@ export const InputPerfilShort = styled(InputPerfil)`
 export const InputPerfilBig = styled(InputPerfil)`
     height: 120px;
 `
-
-export const InputMedium = styled(InputPerfil)`
-    height: 105px;
-`

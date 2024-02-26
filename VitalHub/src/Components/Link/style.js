@@ -33,9 +33,3 @@ export const LinkCard = styled.Text`
 
     ${props => props.listFunction === "pendente" ? css`color: #C81D25;`: props.listFunction === "realizado" ? css`color: #344F8F;`: css`color: red;` }
 `
-
-export const LinkCancel = styled.Text`
-    font-size: 12px;
-    font-family: "MontserratAlternates_500Medium";
-    color: #C81D25;
-`
