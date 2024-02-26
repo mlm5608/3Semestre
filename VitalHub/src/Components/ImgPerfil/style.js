@@ -14,3 +14,8 @@ export const ImgPerfilHomeCard = styled(ImgPerfil)`
     height: 80px;
     width: 80px;
 `
+
+export const ImgMap = styled.Image`
+    width: 100%;
+    height: 320px;
+`

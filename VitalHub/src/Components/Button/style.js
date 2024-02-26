@@ -56,6 +56,7 @@ export const PerfilButton = styled.TouchableHighlight`
 
 export const ButtonModal = styled(Button)`
     width: 95%;
+    margin-top: 30px;
 `
 
 export const ButtonScheduleConsult = styled.TouchableOpacity`
@@ -89,4 +90,16 @@ export const TypeConsultButton = styled.TouchableHighlight`
     css`
         background-color: white;
     `}
+`
+
+export const ButtonSave = styled.TouchableOpacity`
+    width: 170px;
+    height: 45px;
+    background-color: #49B3BA;
+    border: 1px solid #49B3BA; 
+    border-radius: 5px;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 `

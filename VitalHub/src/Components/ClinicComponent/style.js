@@ -4,10 +4,9 @@ import { Title } from "../Title/style";
 
 export const ClinicContent = styled.View`
     width: 90%;
+    height: 102px;
     align-self: center;
     background-color: white;
-    padding: 18px;
-    gap: 10px;
     border-radius: 5px;
     margin-top: 12px;
     elevation: 4px;
@@ -38,8 +37,10 @@ export const LocalClinic = styled(StarsText)`
     color: #4E4B59;
 `
 
-export const TitleClinic = styled(Title)`
+export const TitleCard = styled(Title)`
     font-size: 16px;
+    margin-top: 0px;
+    align-self: flex-start;
 `
 
 export const StarsBox = styled.View`
