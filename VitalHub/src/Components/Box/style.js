@@ -83,7 +83,6 @@ export const IconBox = styled.View`
 `
 
 export const InfosBox = styled.View`
-    width: 240px;
     flex-direction: row;
     gap: 20px;
 `
@@ -104,4 +103,53 @@ export const InputsBox = styled.View`
 export const InputBox = styled.View`
     flex-direction: column;
     width: 45%;
+`
+export const CardBoxColored = styled(CardBox)`
+    ${(props) => props.ClickButton ? 
+    css`
+        border: 2px solid #496BBA;
+    `
+    :
+    css`
+        border: 1px solid white;
+    `
+    }
+`
+
+export const BoxContentMc = styled(BoxContent)`
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px;
+    justify-content: center;
+`
+
+export const InputSelectBox = styled.View`
+    width: 90%;
+    height: 55px;
+    border: 2px solid #60BFC5;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 27px;
+`
+
+export const BoxInfosClinic = styled.View`
+    width: 100%;
+    height: 320;
+    border-radius: 10px 10px 0px 0px;
+    background-color: white;
+    elevation: 15px;
+    align-items: center;
+    
+<<<<<<< HEAD
+`
+
+export const ButtonsBox = styled.View`
+    width: 90%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    gap: 60px;
+=======
+>>>>>>> 739be4765e9108948839652a4a97675cf1af981b
 `
