@@ -13,7 +13,7 @@ import { ButtonListAppontment } from "../../Components/BtnListApointment/style";
 import { useState } from "react";
 import { ListComponent } from "../../Components/List/List";
 import { CardComponent, CardComponentP } from "../../Components/Card/Card";
-import { CancelattionModal } from "../../Components/CancelattionModal/CancelattionModal";
+import { CancelattionModal, CancelattionModalP } from "../../Components/CancelattionModal/CancelattionModal";
 import { AppointmentModal, ConsultLocalModal } from "../../Components/AppointmentModal/AppointmentModal";
 import { ScheduleConsultModal } from "../../Components/ScheduleConsultModal/ScheduleConsultModal";
 import { ButtonScheduleConsult } from "../../Components/Button/style";
@@ -21,12 +21,12 @@ import { ButtonScheduleConsult } from "../../Components/Button/style";
 
 
 
-export const HomeMedico = ({ navigation }) => {
+export const HomeU = ({ navigation }) => {
 
     const [showModalCancel, setShowModalCancel] = useState(false)
     const [showModalAppointment, setShowModalAppointment] = useState(false)
     const [nomePaciente, setNomePaciente] = useState("")
-    const [PacienteOuN, setPacienteOuN] = useState(false)
+    const [PacienteOuN, setPacienteOuN] = useState(true)
     const [medicInfos, setMedicInfos] = useState({})
     const [showConsultLocalModal, setShowConsultLocalModal] = useState(false)
     const [showScheduleConsultModal, setShowScheduleConsultModal] = useState(false)
@@ -303,19 +303,20 @@ export const HomeMedico = ({ navigation }) => {
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
                 NomePaciente={nomePaciente}
+                navigation={() => navigation.navigate("Prontuario")}
             />
 
             <ConsultLocalModal
                 visible={showConsultLocalModal}
                 setOnpress={setShowConsultLocalModal}
                 item={medicInfos}
+                navigation={() => navigation.navigate("LocalConsulta")}
             />
 
             <ScheduleConsultModal
                 visible={showScheduleConsultModal}
                 setOnpress={setShowScheduleConsultModal}
-                navigateMedic={{/*função de navegação para tela de selecionar médico*/ }}
-                navigateLocal={{/* função de navegação para a tela de slecionar clinica*/ }}
+                navigateLocal={() => navigation.navigate("ClinicSelect")}
             />
 
         </Container>

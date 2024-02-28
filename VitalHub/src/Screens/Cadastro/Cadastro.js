@@ -22,11 +22,11 @@ export const Cadastro = ({ navigation }) => {
             <InputSingIn placeholder="Senha" placeholderTextColor="#49B3BA" />
             <InputSingIn placeholder="Confirmar senha" placeholderTextColor="#49B3BA" />
 
-            <Button>
+            <Button onPress={() => navigation.navigate("Home")}>
                 <ButtonTitle>Cadastrar</ButtonTitle>
             </Button>
 
-            <LinkB>Cancelar</LinkB>
+            <LinkB onPress={() => navigation.navigate("Login")}>Cancelar</LinkB>
         </Container>
     )
 }

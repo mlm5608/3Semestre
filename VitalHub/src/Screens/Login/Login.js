@@ -21,21 +21,21 @@ export const Login = ({ navigation }) => {
             <Input placeholder="Usuário ou E-mail" placeholderTextColor="#34898F" />
             <Input placeholder="Senha" placeholderTextColor="#34898F" />
 
-            <LinkMedium>Esqueceu sua senha?</LinkMedium>
+            <LinkMedium onPress={() => navigation.navigate("RecSenha")}>Esqueceu sua senha?</LinkMedium>
 
             
-            <Button>
+            <Button  onPress={() => navigation.navigate("Home")}>
                 <ButtonTitle>Entrar</ButtonTitle>
             </Button>
             
-            <ButtonGoogle>
+            <ButtonGoogle onPress={() => navigation.navigate("Home")}>
                 <AntDesign name="google" size={18} color="#496bba"/>
                 <ButtonTitleGoogle>Entrar com Google</ButtonTitleGoogle>
             </ButtonGoogle>
 
             <ContentAccount>
                 <TextAccount>Não tem uma conta?</TextAccount>
-                <LinkAccount>Crie uma conta agora!</LinkAccount>
+                <LinkAccount onPress={() => navigation.navigate("Cadastro")}>Crie uma conta agora!</LinkAccount>
             </ContentAccount>
         </Container>
     )

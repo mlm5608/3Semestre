@@ -5,8 +5,9 @@ import { InputPerfil, InputPerfilShort } from "../../Components/Input/style";
 import { Label, LabelInputSmall } from "../../Components/Label/style";
 import { Title } from "../../Components/Title/style"
 import { CidadeClinic } from "../../Components/TypeConsult/style";
+import { LinkB } from "../../Components/Link/style";
 
-export const LocalConsulta = ({}) => {
+export const LocalConsulta = ({navigation}) => {
   return (
     <Container>
       {/* Mapa */}
@@ -40,6 +41,8 @@ export const LocalConsulta = ({}) => {
             />
           </InputBox>
         </InputsBox>
+
+        <LinkB onPress={() => {}}>Cancelar</LinkB>
 
       </BoxInfosClinic>
     </Container>

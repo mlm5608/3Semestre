@@ -69,20 +69,13 @@ export const ClinicSelect = ({ navigation }) => {
         />
 
         <Button
-          onPress={() => {
-            /*Volta para a tela de agendar com o nome da clinica no input*/
-            alert(nameClinic);
-          }}
+          onPress={() => navigation.navigate("MedicSelect")}
         >
           <ButtonTitle>Continuar</ButtonTitle>
         </Button>
 
         <LinkB
-          onPress={() => {
-            {
-              /*volta para a tela anterior*/
-            }
-          }}
+          onPress={() => navigation.navigate("Home")}
         >
           Cancelar
         </LinkB>

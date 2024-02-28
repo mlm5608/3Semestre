@@ -47,8 +47,8 @@ export const PerfilButton = styled.TouchableHighlight`
     justify-content: center;
 
     ${props => props.clickButton ? css`
-    background-color: #496bba; ` 
-    : css`
+    background-color: #496bba; `
+        : css`
         background-color: transparent;
         border: 2px solid #607ec5;
     `}
@@ -81,13 +81,13 @@ export const TypeConsultButton = styled.TouchableHighlight`
     justify-content: center;
     align-items: center;
 
-    ${props => props.clickButton ? 
-    css`
+    ${props => props.clickButton ?
+        css`
         background-color: #60BFC5;
         
     `
-    :
-    css`
+        :
+        css`
         background-color: white;
     `}
 `
@@ -102,4 +102,17 @@ export const ButtonSave = styled.TouchableOpacity`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+`
+
+export const IconBox = styled.TouchableOpacity`
+    margin-top: 20px;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(73, 179, 186, .15);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    margin-left: 20px;
+    margin-top: 20px;
 `

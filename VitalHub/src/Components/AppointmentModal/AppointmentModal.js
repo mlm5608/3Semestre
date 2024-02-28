@@ -12,6 +12,7 @@ export const AppointmentModal = ({
     visible,
     setShowModalAppointment,
     NomePaciente,
+    navigation,
     ...rest
 }) => {
     return (
@@ -27,7 +28,7 @@ export const AppointmentModal = ({
                         <EmaiUserShort>emailpaciente@gmail.com</EmaiUserShort>
                     </InfosBoxModal>
 
-                    <ButtonModal>
+                    <ButtonModal onPress={navigation}>
                         <ButtonTitle>Inserir Prontuário</ButtonTitle>
                     </ButtonModal>
 
@@ -42,6 +43,7 @@ export const ConsultLocalModal = ({
     visible,
     setOnpress,
     item,
+    navigation,
     ...rest
 }) => {
     return (
@@ -57,7 +59,7 @@ export const ConsultLocalModal = ({
                         <EmaiUserShort>{item.email}</EmaiUserShort>
                     </InfosBoxModal>
 
-                    <ButtonModal>
+                    <ButtonModal onPress={navigation}>
                         <ButtonTitle>ver local da consulta</ButtonTitle>
                     </ButtonModal>
 

@@ -28,7 +28,7 @@ export const DateSelect = ({ navigation }) => {
           <ButtonTitle>Confirmar</ButtonTitle>
         </Button>
 
-        <LinkB onPress={() => {}}>Cancelar</LinkB>
+        <LinkB onPress={() => {navigation.navigate("MedicSelect")}}>Cancelar</LinkB>
 
         <ConfirmConsultModal
           visible={showConfirmModal}
@@ -38,6 +38,7 @@ export const DateSelect = ({ navigation }) => {
           localConsulta={"Santo André, SP"}
           tipoConsulta={"Rotina"}
           setShowConfirmModal={setShowConfirmModal}
+          navigation={() => navigation.navigate("Home")}
         />
       </COntentSelect>
     </Container>

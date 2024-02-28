@@ -1,5 +1,4 @@
-import { IconBox } from '../../Components/Box/style'
-import { Button } from '../../Components/Button/style'
+import { Button, IconBox } from '../../Components/Button/style'
 import { ButtonTitle} from '../../Components/ButtonTitle/style'
 import { Container } from '../../Components/Container/style'
 import { Input } from '../../Components/Input/style'
@@ -12,7 +11,7 @@ import { AntDesign } from '@expo/vector-icons';
 export const RedSenha = ({ navigation }) => {
     return(
         <Container>
-            <IconBox>
+            <IconBox onPress={() => navigation.navigate("Verificacao")}>
                 <AntDesign name="close" size={22} color="#34898F" />
             </IconBox>
 
@@ -25,7 +24,7 @@ export const RedSenha = ({ navigation }) => {
             <Input placeholder="Nova senha" placeholderTextColor="#34898F" />
             <Input placeholder="Confirmar nova senha" placeholderTextColor="#34898F" />
 
-            <Button>
+            <Button onPress={() => navigation.navigate("Login")}>
                 <ButtonTitle>Confirmar nova senha</ButtonTitle>
             </Button>
         </Container>

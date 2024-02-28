@@ -47,7 +47,7 @@ Duração: 3 dias`} placeholderTextColor="rgba(51, 48, 62, 0.5)"/>
                     <ButtonTitle>Editar</ButtonTitle>
                 </ButtonPerfilDesativate>
 
-                <LinkB>Cancelar</LinkB>
+                <LinkB onPress={() => navigation.navigate("Home")}>Cancelar</LinkB>
             </Container>
         </ContainerScroll>
     )

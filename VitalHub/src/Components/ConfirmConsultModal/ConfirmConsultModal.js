@@ -15,6 +15,7 @@ export const ConfirmConsultModal = ({
     localConsulta,
     tipoConsulta,
     setShowConfirmModal,
+    navigation,
     ...rest
 }) => {
     return(
@@ -38,7 +39,7 @@ export const ConfirmConsultModal = ({
                     <LabelModal>Tipo da Consulta</LabelModal>
                     <ConsultInfoText>{tipoConsulta}</ConsultInfoText>
 
-                    <ButtonModal>
+                    <ButtonModal onPress={navigation}>
                         <ButtonTitle>Confirmar</ButtonTitle>
                     </ButtonModal>
 

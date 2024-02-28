@@ -3,16 +3,15 @@ import { LogoIcon } from "../../Components/Logo/style"
 import { Title } from "../../Components/Title/style"
 import { Subtitle } from "../../Components/Subtitle/style"
 import { Input } from "../../Components/Input/style"
-import { Button } from "../../Components/Button/style"
+import { Button, IconBox } from "../../Components/Button/style"
 import { ButtonTitle } from "../../Components/ButtonTitle/style"
 import { AntDesign } from '@expo/vector-icons';
-import { IconBox } from "../../Components/Box/style"
 
 
 export const RecSenha = ({ navigation }) => {
     return (
         <Container>
-            <IconBox>
+            <IconBox onPress={() => navigation.navigate("Login")}>
                 <AntDesign name="arrowleft" size={22} color="#34898F" />
             </IconBox>
 
@@ -24,7 +23,7 @@ export const RecSenha = ({ navigation }) => {
 
             <Input placeholder="Usuário ou E-mail" placeholderTextColor="#34898F" />
 
-            <Button>
+            <Button onPress={() => navigation.navigate("Verificacao")}>
                 <ButtonTitle>Continuar</ButtonTitle>
             </Button>
         </Container>

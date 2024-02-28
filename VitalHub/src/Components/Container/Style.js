@@ -11,6 +11,7 @@ export const ContainerScroll = styled.ScrollView`
    width: 100%;
 `
 export const ContainerHeader = styled.View`
+    margin-top: 20px;
     width: 100%;
     height: 102px;
     background-color: blue;
@@ -41,4 +42,5 @@ export const COntentSelect = styled.View`
     height: 100%;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 `

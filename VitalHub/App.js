@@ -17,6 +17,7 @@ import { MedicSelect } from "./src/Screens/MedicSelect/MedicSelect";
 import { DateSelect } from "./src/Screens/DateSelect/DateSelect";
 import { LocalConsulta } from "./src/Screens/LocalConsulta/LocalConsulta";
 import { ProntuarioPaciente } from "./src/Screens/ProntuarioPaciente/ProntuarioPaciente";
+import { HomeU } from "./src/Screens/HomeU/Home";
 
 const Stack = createNativeStackNavigator();
 
@@ -100,11 +101,11 @@ export default function App() {
         options={{title:"Home do Paciente"}}
         />
 
-        {/* <Stack.Screen
+        <Stack.Screen
         name="Home"
-        component={Home}
-        options={{title: "Tela Home", headerShown: false0}}
-        /> */}
+        component={HomeU}
+        options={{title: "Tela Home", headerShown: false}}
+        />
 
         <Stack.Screen
         name="ClinicSelect"
@@ -125,6 +126,11 @@ export default function App() {
         name="LocalConsulta"
         component={LocalConsulta}
         options={{title:"Local da consulta", headerShown: false}}
+        />
+        <Stack.Screen
+        name="ProntuarioPaciente"
+        component={ProntuarioPaciente}
+        options={{title:"ProntuarioPaciente", headerShown: false}}
         />
 
         {/* <Stack.Screen

@@ -15,7 +15,6 @@ export const ScheduleConsultModal = ({
     visible,
     setOnpress,
     navigateLocal,
-    navigateMedic,
     ...rest
 }) => {
     const [selected, setSelected] = useState("")
@@ -51,11 +50,10 @@ export const ScheduleConsultModal = ({
                     <Input
                         placeholder="Informe a localização"
                         placeholderTextColor="#34898F"
-                        onPressIn={() => navigateLocal}
                         value={null}
                     />
 
-                    <Button onPress={() => navigateMedic}>
+                    <Button onPress={navigateLocal}>
                         <ButtonTitle>Continuar</ButtonTitle>
                     </Button>
 
