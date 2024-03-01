@@ -12,7 +12,7 @@ import { LinkB, LinkCancel } from "../../Components/Link/style";
 import { NomeUser } from "../../Components/NomeUser/style";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-export const ProntuarioPaciente = () => {
+export const ProntuarioPaciente = ({navigation}) => {
   return (
     <ContainerScroll>
       <Container>
@@ -76,7 +76,7 @@ tudo normal`}
           placeholderTextColor="rgba(51, 48, 62, 0.5)"
         />
 
-        <LinkB>voltar</LinkB>
+        <LinkB onPress={() => navigation.navigate("Home")}>voltar</LinkB>
       </Container>
     </ContainerScroll>
   );

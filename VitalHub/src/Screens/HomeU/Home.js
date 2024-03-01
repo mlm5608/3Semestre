@@ -249,7 +249,7 @@ export const HomeU = ({ navigation }) => {
                             situação={statusLista}
                             onpressCancel={() => setShowModalCancel(true)}
                             onPressInfo={() => { setShowConsultLocalModal(true); setMedicInfos(item); }}
-                            onPressPront={() => { {/*Navega para a tela de Prontuario*/ } }}
+                            onPressPront={() => { navigation.navigate("ProntuarioPaciente")}}
                             dados={item} />
                         :
                         <></>}

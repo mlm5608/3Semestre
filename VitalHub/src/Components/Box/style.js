@@ -122,11 +122,12 @@ export const InputSelectBox = styled.View`
 
 export const BoxInfosClinic = styled.View`
     width: 100%;
-    height: 320;
+    height: 54%;
     border-radius: 10px 10px 0px 0px;
     background-color: white;
     elevation: 15px;
     align-items: center;
+    align-self: flex-end;
 `
 export const ButtonsBox = styled.View`
     width: 90%;

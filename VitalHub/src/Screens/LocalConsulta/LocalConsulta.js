@@ -42,7 +42,7 @@ export const LocalConsulta = ({navigation}) => {
           </InputBox>
         </InputsBox>
 
-        <LinkB onPress={() => {}}>Cancelar</LinkB>
+        <LinkB onPress={() => {navigation.navigate("Home")}}>Voltar</LinkB>
 
       </BoxInfosClinic>
     </Container>
