@@ -38,7 +38,7 @@ export const DateSelect = ({ navigation }) => {
           localConsulta={"Santo André, SP"}
           tipoConsulta={"Rotina"}
           setShowConfirmModal={setShowConfirmModal}
-          navigation={() => navigation.navigate("Home")}
+          navigation={() => navigation.navigate("Main")}
         />
       </COntentSelect>
     </Container>

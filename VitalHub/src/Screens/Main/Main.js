@@ -42,7 +42,7 @@ export function Main() {
             }} />
             <Tab.Screen name="Perfil" component={PerfilPaciente} options={{
                 tabBarIcon:
-                    ({ focused, name }) => (
+                    ({ focused }) => (
                         <ButtonFooter
                             selected={focused}
                             isPerfil={true}

@@ -76,7 +76,7 @@ tudo normal`}
           placeholderTextColor="rgba(51, 48, 62, 0.5)"
         />
 
-        <LinkB onPress={() => navigation.navigate("Home")}>voltar</LinkB>
+        <LinkB onPress={() => navigation.navigate("Main")}>voltar</LinkB>
       </Container>
     </ContainerScroll>
   );

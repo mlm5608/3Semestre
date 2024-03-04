@@ -49,7 +49,7 @@ export const PerfilPaciente = ({ navigation }) => {
                     <ButtonTitle>Editar</ButtonTitle>
                 </ButtonPerfil>
 
-                <ButtonExitApp>
+                <ButtonExitApp onPress={() => navigation.navigate("Login")}>
                     <ButtonTitle>Sair do APP</ButtonTitle>
                 </ButtonExitApp>
             </Container>

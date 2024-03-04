@@ -75,7 +75,7 @@ export const ClinicSelect = ({ navigation }) => {
         </Button>
 
         <LinkB
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Main")}
         >
           Cancelar
         </LinkB>

@@ -45,11 +45,6 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Main"
-          component={Main}
-          options={{ title: "Main", headerShown: false }}
-        />
-        <Stack.Screen
           name="Login"
           component={Login}
           options={{ title: "Login", headerShown: false }}
@@ -80,7 +75,11 @@ export default function App() {
           options={{ title: "Protuário", headerShown: false }}
         />
 
-
+        <Stack.Screen
+          name="Main"
+          component={Main}
+          options={{ title: "Main", headerShown: false }}
+        />
 
         <Stack.Screen
           name="Home"

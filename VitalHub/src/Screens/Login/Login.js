@@ -24,11 +24,11 @@ export const Login = ({ navigation }) => {
             <LinkMedium onPress={() => navigation.navigate("RecSenha")}>Esqueceu sua senha?</LinkMedium>
 
             
-            <Button  onPress={() => navigation.navigate("Home")}>
+            <Button  onPress={() => navigation.navigate("Main")}>
                 <ButtonTitle>Entrar</ButtonTitle>
             </Button>
             
-            <ButtonGoogle onPress={() => navigation.navigate("Home")}>
+            <ButtonGoogle onPress={() => navigation.navigate("Main")}>
                 <AntDesign name="google" size={18} color="#496bba"/>
                 <ButtonTitleGoogle>Entrar com Google</ButtonTitleGoogle>
             </ButtonGoogle>
