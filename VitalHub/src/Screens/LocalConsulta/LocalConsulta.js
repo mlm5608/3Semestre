@@ -6,12 +6,12 @@ import { Label, LabelInputSmall } from "../../Components/Label/style";
 import { Title } from "../../Components/Title/style"
 import { CidadeClinic } from "../../Components/TypeConsult/style";
 import { LinkB } from "../../Components/Link/style";
+import MapaGps from "../../Components/GPS/Gps";
 
 export const LocalConsulta = ({navigation}) => {
   return (
     <Container>
-      {/* Mapa */}
-      <ImgMap source={require("../../Assets/imageMap.png")}/>
+      <MapaGps/>
 
       {/* ContentBox */}
       <BoxInfosClinic>
