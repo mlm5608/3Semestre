@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import MapView from "react-native-maps";
+import MapView, { Marker } from "react-native-maps";
 
-export const GpsBox = styled.View`
-  width: 100%;
-  height: 46%;
+export const MapDraw = styled(MapView).attrs({})`
+    flex: 1;
+    width: 100%;
 `;
 
-export const MapaStyle = styled(MapView)`
-  width: 100%;
-  height: 100%;
+export const MarkerPoint = styled(Marker).attrs({})`
+    
 `;

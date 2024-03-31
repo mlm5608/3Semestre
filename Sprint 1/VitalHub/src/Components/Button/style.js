@@ -116,3 +116,9 @@ export const IconBox = styled.TouchableOpacity`
     margin-left: 20px;
     margin-top: 20px;
 `
+
+export const BtnTitle = styled.Text`
+    color: #FAFAFA;
+    font-family: 'MontserratAlternates_700Bold';
+    font-size: 14px;
+`

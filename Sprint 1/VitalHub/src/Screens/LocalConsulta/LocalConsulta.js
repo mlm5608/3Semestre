@@ -1,12 +1,11 @@
 import { BoxInfosClinic, InputBox, InputsBox } from "../../Components/Box/style";
 import { Container } from "../../Components/Container/style";
-import { ImgMap } from "../../Components/ImgPerfil/style";
 import { InputPerfil, InputPerfilShort } from "../../Components/Input/style";
 import { Label, LabelInputSmall } from "../../Components/Label/style";
 import { Title } from "../../Components/Title/style"
 import { CidadeClinic } from "../../Components/TypeConsult/style";
 import { LinkB } from "../../Components/Link/style";
-import MapaGps from "../../Components/GPS/Gps";
+import {MapaGps} from "../../Components/GPS/Gps";
 
 export const LocalConsulta = ({navigation}) => {
   return (

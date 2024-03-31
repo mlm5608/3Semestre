@@ -137,3 +137,15 @@ export const ButtonsBox = styled.View`
     margin-top: 10px;
     gap: 60px;
 `
+
+export const ContainerPic = styled.View`
+    width: 90%;
+    height: 111px;
+    background-color: #F5F3F3;
+    border-radius: 5px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+`
