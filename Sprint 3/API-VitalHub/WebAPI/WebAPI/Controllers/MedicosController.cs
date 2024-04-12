@@ -5,6 +5,8 @@ using System.IdentityModel.Tokens.Jwt;
 using WebAPI.Domains;
 using WebAPI.Interfaces;
 using WebAPI.Repositories;
+using WebAPI.Utils.BlobStorage;
+using WebAPI.Utils.Mail;
 using WebAPI.ViewModels;
 
 namespace WebAPI.Controllers
@@ -14,9 +16,11 @@ namespace WebAPI.Controllers
     public class MedicosController : ControllerBase
     {
         private IMedicoRepository _medicoRepository;
-        public MedicosController()
+        private readonly EmailSendingService _emailSendingService;
+        public MedicosController(EmailSendingService emailSendingService)
         {
             _medicoRepository = new MedicoRepository();
+            _emailSendingService = emailSendingService;
         }
 
         [HttpGet]
@@ -47,13 +51,21 @@ namespace WebAPI.Controllers
 
 
         [HttpPost]
-        public IActionResult Post(MedicoViewModel medicoModel)
+        public async Task<IActionResult> Post([FromForm] MedicoViewModel medicoModel)
         {
             Usuario user = new Usuario();
             user.Nome = medicoModel.Nome;
             user.Email = medicoModel.Email;
             user.TipoUsuarioId = medicoModel.IdTipoUsuario;
-            user.Foto = medicoModel.Foto;
+
+            //define o nome do container do blob
+            var containerName = "containervitalhubmiguel";
+
+            //define a string de conexão
+            var connectionString = "DefaultEndpointsProtocol=https;AccountName=blobvitalhubmiguel;AccountKey=Dm6H4OrQKAd6Afs89fwiickuX12zIw4XwsvbM7NCqnY5dMWgIwj+1qv1SHr2/sJ1ZyqVEIXDJK3w+AStLe9Rdw==;EndpointSuffix=core.windows.net";
+
+            //chamada do metodo para upload de imagem
+            user.Foto = await AzureBlobStorageHelper.UploadImageBlobAsync(medicoModel.arquivo!, connectionString, containerName);
             user.Senha = medicoModel.Senha;
 
             user.Medico = new Medico();
@@ -67,6 +79,8 @@ namespace WebAPI.Controllers
             user.Medico.Endereco.Cep = medicoModel.Cep;
 
             _medicoRepository.Cadastrar(user);
+
+            await _emailSendingService.SendWelcomeEmail(user.Email!, user.Nome!);
 
             return Ok();
         }
