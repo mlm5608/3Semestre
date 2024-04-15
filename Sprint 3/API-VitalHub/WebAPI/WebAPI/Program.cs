@@ -1,9 +1,13 @@
+using Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using WebAPI.Contexts;
+using WebAPI.Interfaces;
+using WebAPI.Repositories;
 using WebAPI.Utils.Mail;
+using WebAPI.Utils.OCR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -111,6 +115,10 @@ builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection(nameo
 builder.Services.AddTransient<IEmailService, EmailService>();
 
 builder.Services.AddScoped<EmailSendingService>();
+
+builder.Services.AddScoped<IExameRepository, ExameRepository>();
+
+builder.Services.AddScoped<OCRService>(); 
 
 // CORS
 builder.Services.AddCors(options =>

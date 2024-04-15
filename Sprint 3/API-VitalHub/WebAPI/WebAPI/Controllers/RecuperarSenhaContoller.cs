@@ -74,7 +74,7 @@ namespace WebAPI.Controllers
                     return StatusCode(400, "Código Inválido");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return BadRequest("Código Inválido!");
             }
